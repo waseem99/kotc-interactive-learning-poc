@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { calculateProgress } from "@/lib/progress";
+import { calculateProgress } from "../../lib/progress";
 
 describe("calculateProgress", () => {
   it("returns a rounded percentage", () => {
