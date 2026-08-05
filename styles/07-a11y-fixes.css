@@ -1,0 +1,8 @@
+/* Accessibility refinements verified through automated and manual review. */
+.scroll-story-card {
+  opacity: 1;
+}
+
+.scroll-story-card:not(.active):not(.reduced) {
+  border-color: var(--color-border-strong);
+}

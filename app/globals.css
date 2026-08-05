@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "../design-system/tokens.css";
+@import "../styles/01-base.css";
+@import "../styles/02-home-auth.css";
+@import "../styles/03-dashboard-house.css";
+@import "../styles/04-lesson-activity.css";
+@import "../styles/05-admin-completion.css";
+@import "../styles/06-responsive.css";
+@import "../styles/07-a11y-fixes.css";
