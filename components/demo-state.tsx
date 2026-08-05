@@ -59,16 +59,24 @@ export function DemoStateProvider({ children }: { children: ReactNode }) {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
+    let restoredState = defaultState;
+
     try {
       const saved = window.localStorage.getItem(STORAGE_KEY);
       if (saved) {
-        setState({ ...defaultState, ...(JSON.parse(saved) as Partial<DemoState>) });
+        restoredState = {
+          ...defaultState,
+          ...(JSON.parse(saved) as Partial<DemoState>),
+        };
       }
     } catch {
       window.localStorage.removeItem(STORAGE_KEY);
-    } finally {
-      setReady(true);
     }
+
+    queueMicrotask(() => {
+      setState(restoredState);
+      setReady(true);
+    });
   }, []);
 
   useEffect(() => {
