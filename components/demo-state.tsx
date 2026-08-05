@@ -89,7 +89,8 @@ export function DemoStateProvider({ children }: { children: ReactNode }) {
     root.dataset.theme = state.theme;
     root.dataset.textSize = state.textSize;
     root.dataset.reducedMotion = state.reducedMotion ? "true" : "false";
-  }, [state.theme, state.textSize, state.reducedMotion]);
+    root.dataset.demoReady = ready ? "true" : "false";
+  }, [ready, state.theme, state.textSize, state.reducedMotion]);
 
   const update = useCallback((patch: Partial<DemoState>) => {
     setState((current) => ({ ...current, ...patch }));
