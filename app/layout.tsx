@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className="editorial-v2">
         <AppProviders>
           <SiteShell>{children}</SiteShell>
         </AppProviders>
