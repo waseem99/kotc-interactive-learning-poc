@@ -15,7 +15,7 @@ import type {
   ThemePreference,
 } from "@/lib/types";
 
-const STORAGE_KEY = "kotc-poc-state-v1";
+const STORAGE_KEY = "kotc-poc-state-v2";
 
 type DemoState = {
   role: LearnerRole | null;
@@ -43,7 +43,7 @@ type DemoStateContextValue = DemoState & {
 
 const defaultState: DemoState = {
   role: null,
-  theme: "system",
+  theme: "light",
   textSize: "standard",
   reducedMotion: false,
   completedTopics: ["foundation"],
