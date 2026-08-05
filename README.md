@@ -2,6 +2,12 @@
 
 A polished, accessible Next.js proof of concept prepared for the Keepers of the Circle Interactive Educational Website proposal.
 
+## Live demonstration
+
+**Public proposal demo:** https://kotc-interactive-learning-poc.vercel.app
+
+The deployed demonstration is intentionally excluded from search-engine indexing. Vercel is used only for bid-stage presentation; the proposed production environment remains AWS Canada.
+
 ## Purpose
 
 This repository demonstrates the proposed learner experience and technical approach for the RFP’s highest-value requirements:
@@ -50,7 +56,7 @@ Separate routes demonstrate administration, structured content editing, and the 
 - Local JSON and browser `localStorage`
 - Vitest for unit tests
 - Playwright and axe-core for end-to-end and accessibility checks
-- GitHub Actions for type-check, lint, unit tests, build, and browser tests
+- GitHub Actions for dependency audit, type-check, lint, unit tests, build, and browser tests
 - Vercel for bid-stage preview hosting only
 
 The production proposal remains based on Next.js, NestJS, Strapi, PostgreSQL, Amazon Cognito, and AWS Canada. Those production services are intentionally not implemented in this front-end proof of concept.
@@ -67,6 +73,7 @@ Open `http://localhost:3000`.
 ## Quality commands
 
 ```bash
+npm audit --omit=dev --audit-level=high
 npm run typecheck
 npm run lint
 npm run test
@@ -98,7 +105,7 @@ The POC deliberately avoids invented Indigenous imagery, motifs, patterns, langu
 
 ## Preview and production distinction
 
-- **Vercel:** proposal preview hosting
+- **Vercel:** public proposal demonstration at https://kotc-interactive-learning-poc.vercel.app
 - **Proposed production environment:** AWS Canada with secure application, database, media, monitoring, backup, and identity services
 
 ## Documentation
