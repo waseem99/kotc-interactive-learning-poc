@@ -1,0 +1,43 @@
+{
+  "name": "kotc-interactive-learning-poc",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:a11y": "playwright test tests/e2e/accessibility.spec.ts",
+    "check": "npm run typecheck && npm run lint && npm run test && npm run build"
+  },
+  "dependencies": {
+    "framer-motion": "latest",
+    "lucide-react": "latest",
+    "next": "16.2.12",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "latest",
+    "@playwright/test": "latest",
+    "@tailwindcss/postcss": "4.3.3",
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/react": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "^9.39.0",
+    "eslint-config-next": "16.2.12",
+    "jsdom": "latest",
+    "tailwindcss": "4.3.3",
+    "typescript": "^5.9.3",
+    "vitest": "latest"
+  }
+}
