@@ -16,7 +16,9 @@ test("learner can move from role selection to the interactive house", async ({ p
   await expect(page).toHaveURL(/\/house/);
   await expect(page.getByRole("heading", { name: /navigate a complete learning chapter/i })).toBeVisible();
   await page.getByTestId("house-topic-materials").click();
-  await expect(page.getByRole("heading", { name: "Lower-impact materials" })).toBeVisible();
+  await expect(
+    page.locator(".topic-panel").getByRole("heading", { name: "Lower-impact materials" }),
+  ).toBeVisible();
 });
 
 test("display preferences persist after refresh", async ({ page }) => {
