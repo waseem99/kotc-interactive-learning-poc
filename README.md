@@ -25,6 +25,21 @@ This repository demonstrates the proposed learner experience and technical appro
 
 This is a **functional bid-stage concept**, not the final platform or cultural design. Final imagery, terminology, symbolism, stories, curriculum, and brand treatment must be developed through KOTC-led co-design, cultural review, community input, and formal approval.
 
+## Editorial v2 visual direction
+
+The current demonstration uses a warm editorial and architectural system rather than a green-heavy sustainability treatment:
+
+- Warm ivory and white page surfaces
+- Deep ink-blue primary actions
+- Clay, ochre, muted blue and plum supporting accents
+- Green reserved for completion and success
+- Larger whitespace and clearer content hierarchy
+- Architectural-grid interactive house presentation
+- Multi-accent administrator analytics
+- Consolidated accessible display-settings menu
+
+The palette is a functional proposal direction only. It deliberately avoids invented Indigenous motifs, patterns, language, stories and symbolism.
+
 ## Demo journey
 
 `Sign in concept → Role selection → Learner dashboard → Interactive house → Lesson → Activity → Completion`
@@ -101,7 +116,7 @@ This is not a formal independent accessibility certification.
 
 ## Cultural-safety boundary
 
-The POC deliberately avoids invented Indigenous imagery, motifs, patterns, language, stories, identity claims, and symbolism. The neutral palette and construction illustration are functional placeholders only.
+The POC deliberately avoids invented Indigenous imagery, motifs, patterns, language, stories, identity claims, and symbolism. The architectural and material-inspired visual system is a functional placeholder only.
 
 ## Preview and production distinction
 
@@ -111,7 +126,8 @@ The POC deliberately avoids invented Indigenous imagery, motifs, patterns, langu
 ## Documentation
 
 - [AI-first implementation plan](docs/AI_FIRST_IMPLEMENTATION_PLAN.md)
-- [Design system v0.1](docs/DESIGN_SYSTEM.md)
+- [Editorial design system v0.2](docs/EDITORIAL_V2_DESIGN_SYSTEM.md)
+- [Original functional design system v0.1](docs/DESIGN_SYSTEM.md)
 - [Complete design process](docs/DESIGN_PROCESS.md)
 - [Demo scope and acceptance](docs/DEMO_SCOPE_AND_ACCEPTANCE.md)
 - [Implementation status](docs/IMPLEMENTATION_STATUS.md)
