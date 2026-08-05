@@ -36,13 +36,13 @@ export default function HomePage() {
                 View the admin concept
               </Link>
             </div>
-            <div className="trust-row" aria-label="Prototype principles">
+            <div className="trust-row">
               <span><BadgeCheck aria-hidden="true" /> WCAG 2.2 AA target</span>
               <span><Users aria-hidden="true" /> KOTC-led co-design</span>
               <span><ShieldCheck aria-hidden="true" /> Privacy-conscious architecture</span>
             </div>
           </div>
-          <div className="hero-visual" aria-label="Illustrative learner dashboard preview">
+          <div className="hero-visual">
             <div className="preview-window">
               <div className="preview-window-bar"><span /><span /><span /><small>learner dashboard</small></div>
               <div className="preview-content">
