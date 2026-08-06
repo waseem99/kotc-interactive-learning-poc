@@ -1,11 +1,11 @@
 {
-  "version": "4.0.0-review",
+  "version": "4.1.0-frontend",
   "name": "KOTC Learning Commons V4 Asset Pack",
-  "status": "review-stage",
+  "status": "frontend-implementation",
   "productionApproved": false,
   "assetRoot": "/assets/v4",
   "core": {
-    "logo": "/assets/v4/brand/kotc-logo-placeholder.svg",
+    "logo": "/assets/v4/brand/kotc-logo-supplied-reference.svg",
     "hero": "/assets/v4/illustrations/hero-workshop.svg",
     "house": "/assets/v4/illustrations/house-cutaway.svg",
     "journey": "/assets/v4/illustrations/learning-path.svg",
@@ -16,37 +16,18 @@
     "patternSprite": "/assets/v4/patterns/brand-patterns.svg",
     "iconSprite": "/assets/v4/icons/ui-icons.svg"
   },
-  "spriteIds": {
-    "context": [
-      "workshop-collaboration",
-      "timber-framing",
-      "northern-landscape",
-      "house-roof-detail",
-      "insulation-detail"
-    ],
-    "materials": [
-      "reclaimed-wood",
-      "fibre-insulation",
-      "recycled-steel",
-      "efficient-glazing"
-    ],
-    "patterns": [
-      "circle-rays",
-      "horizon-divider",
-      "horizon-divider-compact",
-      "dot-texture",
-      "dot-texture-sky"
-    ],
-    "icons": [
-      "keyboard",
-      "transcript",
-      "non-drag",
-      "certificate",
-      "completed",
-      "locked",
-      "current-marker",
-      "progress-ring"
-    ]
+  "frontend": {
+    "bodyClass": "learning-commons-v4",
+    "styleEntry": "/styles/11-learning-commons-v4.css",
+    "implementationPlan": "/docs/V4_FRONTEND_IMPLEMENTATION_PLAN.md",
+    "homePage": "/app/page.tsx",
+    "siteShell": "/components/site-shell.tsx"
   },
-  "brandBoundary": "The official KOTC logo master is not available in the repository. The included logo placeholder must be replaced before client presentation or production. All other visuals are original neutral prototype assets with no assigned cultural meaning."
+  "spriteIds": {
+    "context": ["workshop-collaboration", "timber-framing", "northern-landscape", "house-roof-detail", "insulation-detail"],
+    "materials": ["reclaimed-wood", "fibre-insulation", "recycled-steel", "efficient-glazing"],
+    "patterns": ["circle-rays", "horizon-divider", "horizon-divider-compact", "dot-texture", "dot-texture-sky"],
+    "icons": ["keyboard", "transcript", "non-drag", "certificate", "completed", "locked", "current-marker", "progress-ring"]
+  },
+  "brandBoundary": "The user-supplied raster logo is embedded as a proposal-stage reference. Preserve its proportions and colours. Replace it with an official transparent SVG or high-resolution transparent master before final production. All other visuals are original neutral prototype assets with no assigned cultural meaning."
 }
