@@ -2,7 +2,7 @@ name: Proposal Screenshots
 
 on:
   push:
-    branches: [main]
+    branches: [main, redesign/editorial-v2]
   workflow_dispatch:
 
 permissions:
