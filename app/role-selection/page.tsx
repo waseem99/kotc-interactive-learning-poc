@@ -6,27 +6,9 @@ import { useState } from "react";
 import { useDemoState } from "@/components/demo-state";
 import type { LearnerRole } from "@/lib/types";
 
-const choices: Array<{
-  role: LearnerRole;
-  title: string;
-  description: string;
-  icon: typeof HardHat;
-  examples: string[];
-}> = [
-  {
-    role: "learner",
-    title: "I work or train in the trades",
-    description: "Learn about green building choices, safer practices, and how to advocate for respectful workplaces.",
-    icon: HardHat,
-    examples: ["Practical building topics", "Workplace safety", "Resources and next steps"],
-  },
-  {
-    role: "employer",
-    title: "I represent an employer or union",
-    description: "Explore green construction alternatives and practical ways to create culturally safer workplaces.",
-    icon: BriefcaseBusiness,
-    examples: ["Team learning pathways", "Culturally safer practices", "Program and policy resources"],
-  },
+const choices: Array<{ role: LearnerRole; title: string; description: string; icon: typeof HardHat; examples: string[] }> = [
+  { role: "learner", title: "Employee pathway", description: "For learners, tradespeople and people entering or working in construction.", icon: HardHat, examples: ["Five shared chapters", "One employee-specific chapter", "Same completion certificate"] },
+  { role: "employer", title: "Employer pathway", description: "For employers, unions, supervisors and organizational representatives.", icon: BriefcaseBusiness, examples: ["Five shared chapters", "One employer-specific chapter", "Same completion certificate"] },
 ];
 
 export default function RoleSelectionPage() {
@@ -41,49 +23,20 @@ export default function RoleSelectionPage() {
   }
 
   return (
-    <section className="section page-section">
+    <section className="v5-page">
       <div className="container narrow-container">
         <div className="page-intro centered">
-          <span className="eyebrow"><Users aria-hidden="true" /> Personalize the demonstration</span>
-          <h1>Which learning pathway should we show?</h1>
-          <p>Your choice changes the emphasis of the demo. In the production platform, content can be assigned by role, organization, or program.</p>
+          <span className="v5-kicker"><Users aria-hidden="true" /> Select your course pathway</span>
+          <h1>Which version of Chapter 5 should we show?</h1>
+          <p>Both pathways complete one six-chapter course. Five chapters are shared; one chapter contains content tailored to the selected audience.</p>
         </div>
-
-        <div className="role-grid" role="radiogroup" aria-label="Choose a learning pathway">
+        <div className="role-grid" role="radiogroup" aria-label="Choose employee or employer pathway">
           {choices.map(({ role: value, title, description, icon: Icon, examples }) => {
             const isSelected = selected === value;
-            return (
-              <button
-                type="button"
-                role="radio"
-                aria-checked={isSelected}
-                className={`role-card ${isSelected ? "selected" : ""}`}
-                key={value}
-                onClick={() => setSelected(value)}
-                data-testid={`role-${value}`}
-              >
-                <span className="role-icon"><Icon aria-hidden="true" /></span>
-                <span className="role-copy">
-                  <strong>{title}</strong>
-                  <span>{description}</span>
-                  <span className="role-examples">
-                    {examples.map((example) => <small key={example}>{example}</small>)}
-                  </span>
-                </span>
-                <span className="radio-indicator" aria-hidden="true"><span /></span>
-              </button>
-            );
+            return <button type="button" role="radio" aria-checked={isSelected} className={`role-card ${isSelected ? "selected" : ""}`} key={value} onClick={() => setSelected(value)} data-testid={`role-${value}`}><span className="role-icon"><Icon aria-hidden="true" /></span><span className="role-copy"><strong>{title}</strong><span>{description}</span><span className="role-examples">{examples.map((example) => <small key={example}>{example}</small>)}</span></span><span className="radio-indicator" aria-hidden="true"><span /></span></button>;
           })}
         </div>
-
-        <div className="selection-actions">
-          <p aria-live="polite">
-            {selected ? `${selected === "learner" ? "Trades learner" : "Employer or union"} pathway selected.` : "Select a pathway to continue."}
-          </p>
-          <button type="button" className="button primary" disabled={!selected} onClick={continueJourney}>
-            Continue to dashboard <ArrowRight aria-hidden="true" />
-          </button>
-        </div>
+        <div className="selection-actions"><p aria-live="polite">{selected ? `${selected === "learner" ? "Employee" : "Employer"} pathway selected.` : "Select a pathway to continue."}</p><button type="button" className="button primary" disabled={!selected} onClick={continueJourney}>Continue to dashboard <ArrowRight aria-hidden="true" /></button></div>
       </div>
     </section>
   );

@@ -3,19 +3,11 @@ import { HouseNavigator } from "@/components/house-navigator";
 
 export default function HousePage() {
   return (
-    <section className="section page-section">
+    <section className="v5-page">
       <div className="container">
-        <div className="page-intro split-intro">
-          <div>
-            <span className="eyebrow"><Building2 aria-hidden="true" /> Interactive chapter concept</span>
-            <h1>Navigate a complete learning chapter through the building.</h1>
-            <p>The house turns building topics into an understandable spatial journey while preserving equivalent access through a structured list view.</p>
-          </div>
-          <div className="access-note">
-            <span><Keyboard aria-hidden="true" /> Keyboard operable</span>
-            <span><Smartphone aria-hidden="true" /> Touch friendly</span>
-            <span><Building2 aria-hidden="true" /> List equivalent</span>
-          </div>
+        <div className="v5-page-head">
+          <div><span className="v5-kicker"><Building2 aria-hidden="true" /> Exterior interactive house</span><h1>Explore the building from the outside.</h1><p>Move between four controlled exterior views and select exactly 16 building topics. Every destination is also available through an equivalent structured list.</p></div>
+          <div className="access-note"><span><Keyboard aria-hidden="true" /> Keyboard operable</span><span><Smartphone aria-hidden="true" /> Touch friendly</span><span><Building2 aria-hidden="true" /> Equal list mode</span></div>
         </div>
         <HouseNavigator />
       </div>

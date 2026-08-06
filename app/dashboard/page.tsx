@@ -1,105 +1,38 @@
 "use client";
 
 import Link from "next/link";
-import {
-  ArrowRight,
-  Award,
-  BookOpen,
-  Building2,
-  CheckCircle2,
-  Clock3,
-  HardHat,
-  Sparkles,
-} from "lucide-react";
+import { ArrowRight, Award, BookOpen, CheckCircle2, Clock3, HardHat, RotateCcw } from "lucide-react";
 import { useDemoState } from "@/components/demo-state";
 import { ProgressRing } from "@/components/progress-ring";
-import { StatusBadge, type Status } from "@/components/status-badge";
-import { modules, topics } from "@/content/mock-program";
-import { calculateProgress } from "@/lib/progress";
+import { chapters, course } from "@/content/mock-program";
 
 export default function DashboardPage() {
-  const { role, completedTopics, activityComplete } = useDemoState();
-  const progress = calculateProgress(completedTopics.length, topics.length);
-  const roleLabel = role === "employer" ? "Employer and union pathway" : "Trades learner pathway";
+  const { role, completedTopics, currentTopic } = useDemoState();
+  const complete = Math.min(completedTopics.length, 16);
+  const progress = Math.round((complete / 16) * 100);
+  const roleLabel = role === "employer" ? "Employer pathway" : "Employee pathway";
+  const currentChapter = chapters.find((chapter) => chapter.topicIds.includes(currentTopic)) ?? chapters[0];
 
   return (
-    <section className="section page-section">
+    <section className="v5-page">
       <div className="container">
-        <div className="dashboard-heading">
-          <div>
-            <span className="eyebrow"><HardHat aria-hidden="true" /> {roleLabel}</span>
-            <h1>Welcome back. Your next step is ready.</h1>
-            <p>This illustrative dashboard brings progress, learning modules, resources, and completion status into one clear view.</p>
-          </div>
-          <Link href="/role-selection" className="text-link">Change pathway</Link>
-        </div>
+        <header className="v5-page-head"><div><span className="v5-kicker"><HardHat aria-hidden="true" /> {roleLabel}</span><h1>Welcome back. Continue your course.</h1><p>Your progress is saved in this demonstration browser so you can leave and return to the same place.</p></div><Link href="/role-selection" className="v5-text-link">Change pathway</Link></header>
 
-        <div className="dashboard-hero-card">
-          <ProgressRing value={progress} label="overall progress" />
-          <div className="dashboard-hero-copy">
-            <span className="status-kicker"><Sparkles aria-hidden="true" /> Continue where you left off</span>
-            <h2>Green and healthy building foundations</h2>
-            <p>Explore lower-impact materials through an interactive house, a short lesson, and an accessible activity.</p>
-            <div className="meta-row">
-              <span><BookOpen aria-hidden="true" /> Chapter 1 of 3</span>
-              <span><Clock3 aria-hidden="true" /> About 20 minutes remaining</span>
-            </div>
-            <Link href="/house" className="button primary" data-testid="continue-learning">
-              Continue learning <ArrowRight aria-hidden="true" />
-            </Link>
-          </div>
-          <div className="dashboard-illustration" aria-hidden="true">
-            <div className="mini-house-roof" />
-            <div className="mini-house-body">
-              <span /><span className="accent" /><span /><span />
-            </div>
-          </div>
-        </div>
+        <section className="v5-resume-card" aria-label="Resume learning"><ProgressRing value={progress} label="course progress" /><div><span className="v5-kicker">Next step</span><h2>{currentChapter.title}</h2><p>Continue with the interactive house and the topic currently in progress.</p><div className="v5-meta"><span><BookOpen aria-hidden="true" /> Chapter {currentChapter.number} of 6</span><span><Clock3 aria-hidden="true" /> Up to {course.estimatedMinutes} minutes total</span></div></div><Link href="/house" className="button primary" data-testid="continue-learning">Continue learning <ArrowRight aria-hidden="true" /></Link></section>
 
-        <div className="dashboard-layout">
-          <div>
-            <div className="section-title-row">
-              <div><span className="eyebrow">Your program</span><h2>Learning modules</h2></div>
-              <span className="illustrative-label">Illustrative content</span>
-            </div>
-            <div className="module-list">
-              {modules.map((module, index) => {
-                const status: Status = index === 0 ? (activityComplete ? "completed" : "current") : index === 1 ? "available" : "locked";
-                return (
-                  <article className="module-card" key={module.id}>
-                    <div className="module-number">{String(index + 1).padStart(2, "0")}</div>
-                    <div className="module-copy">
-                      <div className="module-title-row"><h3>{module.title}</h3><StatusBadge status={status} /></div>
-                      <p>{module.summary}</p>
-                      <div className="meta-row"><span>{module.lessons} lessons</span><span>{module.estimatedTime}</span></div>
-                    </div>
-                    {index === 0 ? <Link href="/house" className="icon-link" aria-label={`Open ${module.title}`}><ArrowRight aria-hidden="true" /></Link> : null}
-                  </article>
-                );
+        <div className="v5-dashboard-grid">
+          <section>
+            <div className="v5-section-title"><div><span className="v5-kicker">One course · six chapters</span><h2>Your learning trail</h2></div><span className="v5-placeholder">Working chapter titles</span></div>
+            <ol className="v5-chapter-list">
+              {chapters.map((chapter) => {
+                const done = chapter.topicIds.every((id) => completedTopics.includes(id));
+                const active = chapter.id === currentChapter.id && !done;
+                return <li key={chapter.id} className={done ? "done" : active ? "active" : ""}><div className="v5-chapter-number">{done ? <CheckCircle2 aria-hidden="true" /> : chapter.number}</div><div className="v5-chapter-copy"><div><h3>{chapter.title}</h3>{chapter.pathwayMode === "variant" ? <span className="v5-pathway-tag">Tailored for {roleLabel.toLowerCase()}</span> : null}</div><p>{chapter.summary}</p><span>{chapter.estimatedMinutes} minutes · {chapter.topicIds.length} required topic{chapter.topicIds.length === 1 ? "" : "s"}</span></div><div className="v5-chapter-actions"><span className="v5-status">{done ? "Completed" : active ? "In progress" : "Not started"}</span><Link href={`/chapter/${chapter.id}`} aria-label={`Open chapter ${chapter.number}: ${chapter.title}`}><ArrowRight aria-hidden="true" /></Link></div></li>;
               })}
-            </div>
-          </div>
+            </ol>
+          </section>
 
-          <aside className="dashboard-side" aria-label="Progress and certificate information">
-            <article className="side-card certificate-card">
-              <span className="side-icon"><Award aria-hidden="true" /></span>
-              <span className="eyebrow">Certificate progress</span>
-              <h2>{activityComplete ? "Concept certificate unlocked" : "Complete all required learning"}</h2>
-              <p>{activityComplete ? "The demo completion state is ready to view." : "Your certificate will become available after required lessons and activities are complete."}</p>
-              {activityComplete ? (
-                <Link href="/completion" className="button secondary full-width">View completion concept</Link>
-              ) : (
-                <div className="check-list">
-                  <span><CheckCircle2 aria-hidden="true" /> 1 topic completed</span>
-                  <span><Building2 aria-hidden="true" /> Interactive chapter in progress</span>
-                </div>
-              )}
-            </article>
-            <article className="side-card device-note">
-              <strong>Demo privacy note</strong>
-              <p>Your selected role, display preferences, and progress are stored only in this browser for demonstration purposes.</p>
-            </article>
-          </aside>
+          <aside className="v5-side-stack"><article className="v5-side-card"><Award aria-hidden="true" /><span className="v5-kicker">Completion rule</span><h2>Complete all required content.</h2><p>There are no grades, scores, assessments or prerequisites. Completion results in a Passed/Completed status and certificate.</p><Link href="/completion" className="button secondary">Preview certificate</Link></article><article className="v5-side-card soft"><RotateCcw aria-hidden="true" /><strong>Resume later</strong><p>Production accounts will save progress securely so learners can continue over multiple sessions.</p></article></aside>
         </div>
       </div>
     </section>

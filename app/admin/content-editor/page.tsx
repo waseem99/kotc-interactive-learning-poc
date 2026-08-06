@@ -1,22 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import {
-  ArrowLeft,
-  CheckCircle2,
-  Eye,
-  FileText,
-  Image as ImageIcon,
-  ListChecks,
-  Save,
-  Upload,
-  Users,
-} from "lucide-react";
+import { ArrowLeft, CheckCircle2, Eye, FileText, House, Image as ImageIcon, ListChecks, Save, Upload, Users } from "lucide-react";
 import { useState } from "react";
 
 export default function ContentEditorPage() {
   const [status, setStatus] = useState("Draft");
   const [saved, setSaved] = useState(false);
+  const [pathway, setPathway] = useState("shared");
 
   function saveDraft() {
     setSaved(true);
@@ -26,74 +17,24 @@ export default function ContentEditorPage() {
   return (
     <section className="section page-section editor-page">
       <div className="container">
-        <div className="editor-topbar">
-          <Link href="/admin" className="text-link"><ArrowLeft aria-hidden="true" /> Back to dashboard</Link>
-          <div className="editor-actions">
-            <button type="button" className="button secondary"><Eye aria-hidden="true" /> Preview</button>
-            <button type="button" className="button primary" onClick={saveDraft}><Save aria-hidden="true" /> Save draft</button>
-          </div>
-        </div>
-
-        <div className="editor-heading">
-          <div><span className="eyebrow"><FileText aria-hidden="true" /> CMS editing concept</span><h1>Lower-impact materials</h1><p>Illustrative structured content editor showing how KOTC staff could manage lessons without developer intervention.</p></div>
-          <span className="illustrative-label">No changes are submitted</span>
-        </div>
-
+        <div className="editor-topbar"><Link href="/admin" className="text-link"><ArrowLeft aria-hidden="true" /> Back to admin</Link><div className="editor-actions"><button type="button" className="button secondary"><Eye aria-hidden="true" /> Preview as learner</button><button type="button" className="button primary" onClick={saveDraft}><Save aria-hidden="true" /> Save draft</button></div></div>
+        <div className="editor-heading"><div><span className="eyebrow"><FileText aria-hidden="true" /> KOTC CMS concept</span><h1>Chapter and topic editor</h1><p>Manage one six-chapter course, one pathway-specific chapter, KOTC-supplied media and all 16 exterior-house hotspots without developer intervention.</p></div><span className="illustrative-label">No changes are submitted</span></div>
         {saved ? <div className="save-notice" role="status"><CheckCircle2 aria-hidden="true" /> Draft saved locally for this demonstration.</div> : null}
 
         <div className="editor-layout">
           <div className="editor-main">
-            <section className="editor-card">
-              <div className="editor-card-heading"><span className="icon-tile"><FileText aria-hidden="true" /></span><div><h2>Lesson details</h2><p>Core metadata used throughout the learner experience.</p></div></div>
-              <div className="form-grid">
-                <label className="full-span"><span>Lesson title</span><input defaultValue="Choosing lower-impact materials" /></label>
-                <label><span>Estimated duration</span><input defaultValue="12 minutes" /></label>
-                <label><span>Learner pathway</span><select defaultValue="all"><option value="all">All learners</option><option value="learner">Trades learners</option><option value="employer">Employers and unions</option></select></label>
-                <label className="full-span"><span>Summary</span><textarea rows={3} defaultValue="Use a balanced set of questions to compare health, durability, sourcing, installation, and end-of-life considerations." /></label>
-              </div>
-            </section>
+            <section className="editor-card"><div className="editor-card-heading"><span className="icon-tile"><FileText aria-hidden="true" /></span><div><h2>Chapter details</h2><p>Core metadata used in the dashboard, navigation and completion tracking.</p></div></div><div className="form-grid"><label><span>Chapter</span><select defaultValue="6"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label><label><span>Estimated duration</span><input defaultValue="35 minutes" /></label><label className="full-span"><span>Working chapter title</span><input defaultValue="Materials, Waste and Next Steps" /></label><label className="full-span"><span>Summary</span><textarea rows={3} defaultValue="Bring the course together through material choices and construction waste reduction." /></label></div></section>
 
-            <section className="editor-card">
-              <div className="editor-card-heading"><span className="icon-tile"><ImageIcon aria-hidden="true" /></span><div><h2>Media, captions, and transcript</h2><p>Upload media and maintain accessible alternatives together.</p></div></div>
-              <div className="upload-zone"><Upload aria-hidden="true" /><strong>Video file or hosted media URL</strong><span>Illustrative upload control — MP4, WebM, or approved provider</span><button type="button" className="button secondary">Choose media</button></div>
-              <div className="form-grid top-gap">
-                <label><span>Caption file</span><input defaultValue="lower-impact-materials.en.vtt" /></label>
-                <label><span>Transcript status</span><select defaultValue="ready"><option value="draft">Draft</option><option value="review">Ready for review</option><option value="ready">Approved</option></select></label>
-              </div>
-            </section>
+            <section className="editor-card"><div className="editor-card-heading"><span className="icon-tile"><Users aria-hidden="true" /></span><div><h2>Pathway assignment</h2><p>Five chapters are shared. One chapter can display an employee or employer version.</p></div></div><div className="form-grid"><label><span>Content mode</span><select value={pathway} onChange={(event)=>setPathway(event.target.value)}><option value="shared">Shared for both pathways</option><option value="variant">Employee and employer variants</option></select></label><label><span>Preview audience</span><select disabled={pathway!=="variant"}><option>Employee</option><option>Employer</option></select></label>{pathway==="variant"?<label className="full-span"><span>Variant note</span><textarea rows={3} defaultValue="This chapter uses the same position in the course but serves approved content for the learner's selected pathway." /></label>:null}</div></section>
 
-            <section className="editor-card">
-              <div className="editor-card-heading"><span className="icon-tile"><ListChecks aria-hidden="true" /></span><div><h2>Interactive activity</h2><p>Choose a reusable activity type and configure its content.</p></div></div>
-              <div className="form-grid">
-                <label><span>Activity type</span><select defaultValue="categorize"><option value="categorize">Categorize / drag and place</option><option value="flip">Flip cards</option><option value="reveal">Reveal panels</option><option value="sequence">Sequence steps</option></select></label>
-                <label><span>House hotspot</span><select defaultValue="materials"><option value="materials">Lower-impact materials</option><option value="air">Indoor air quality</option><option value="water">Water and moisture</option></select></label>
-                <label className="full-span"><span>Activity instructions</span><textarea rows={3} defaultValue="Sort each material choice into the most appropriate category. Drag a card or use the select-and-place controls." /></label>
-              </div>
-            </section>
+            <section className="editor-card"><div className="editor-card-heading"><span className="icon-tile"><ImageIcon aria-hidden="true" /></span><div><h2>KOTC-supplied media and access files</h2><p>Keep video, captions, transcript, illustration and alternative text together.</p></div></div><div className="upload-zone"><Upload aria-hidden="true" /><strong>Upload approved KOTC media</strong><span>Video, poster image, illustration, transcript, captions or downloadable resource</span><button type="button" className="button secondary">Choose files</button></div><div className="form-grid top-gap"><label><span>Caption file</span><input defaultValue="material-selection.en.vtt" /></label><label><span>Transcript status</span><select defaultValue="ready"><option value="draft">Draft</option><option value="review">Ready for review</option><option value="ready">Approved</option></select></label><label className="full-span"><span>Alternative text</span><textarea rows={2} defaultValue="Approved illustration comparing four construction material samples." /></label></div></section>
+
+            <section className="editor-card"><div className="editor-card-heading"><span className="icon-tile"><House aria-hidden="true" /></span><div><h2>Exterior-house hotspot</h2><p>Connect the learning topic to one of the 16 numbered options and a controlled exterior view.</p></div></div><div className="form-grid"><label><span>Hotspot</span><select defaultValue="15"><option>1 — Site and surroundings</option><option>2 — Foundation</option><option>3 — Ground moisture</option><option>4 — Exterior walls</option><option>5 — Insulation</option><option>6 — Air sealing</option><option>7 — Windows</option><option>8 — Exterior doors</option><option>9 — Roof system</option><option>10 — Drainage</option><option>11 — Maintenance and durability</option><option>12 — Heating and cooling</option><option>13 — Ventilation</option><option>14 — Water efficiency</option><option value="15">15 — Material selection</option><option>16 — Construction waste</option></select></label><label><span>Exterior view</span><select defaultValue="left"><option>front</option><option value="left">left</option><option>rear</option><option>right</option></select></label><label><span>Horizontal position (%)</span><input type="number" min="0" max="100" defaultValue="72" /></label><label><span>Vertical position (%)</span><input type="number" min="0" max="100" defaultValue="63" /></label><label className="full-span"><span>Topic description</span><textarea rows={3} defaultValue="Compare realistic materials using health, durability, sourcing, installation, maintenance and end-of-life criteria." /></label></div></section>
+
+            <section className="editor-card"><div className="editor-card-heading"><span className="icon-tile"><ListChecks aria-hidden="true" /></span><div><h2>Non-graded interaction</h2><p>Activities reinforce learning but do not produce marks, grades or pass scores.</p></div></div><div className="form-grid"><label><span>Interaction type</span><select defaultValue="categorize"><option value="categorize">Categorize / select and place</option><option value="flip">Flip cards</option><option value="reveal">Reveal panels</option><option value="sequence">Sequence steps</option></select></label><label><span>Completion behaviour</span><select><option>Required acknowledgement</option><option>Required interaction completion</option><option>Optional enrichment</option></select></label><label className="full-span"><span>Instructions</span><textarea rows={3} defaultValue="Compare each material choice. Dragging is optional; keyboard and select-and-place controls must provide the same result." /></label></div></section>
           </div>
 
-          <aside className="editor-sidebar">
-            <section className="editor-card publish-card">
-              <span className="eyebrow">Publishing workflow</span>
-              <h2>Review and approval</h2>
-              <label><span>Current status</span><select value={status} onChange={(event) => setStatus(event.target.value)}><option>Draft</option><option>Content review</option><option>Cultural review</option><option>Accessibility review</option><option>Approved</option></select></label>
-              <div className="workflow-list">
-                <span className="done"><CheckCircle2 aria-hidden="true" /> Content owner assigned</span>
-                <span className={status === "Approved" ? "done" : ""}><Users aria-hidden="true" /> Cultural review recorded</span>
-                <span className={status === "Approved" ? "done" : ""}><ListChecks aria-hidden="true" /> Accessibility checklist complete</span>
-              </div>
-              <button type="button" className="button primary full-width" disabled={status !== "Approved"}>Publish lesson</button>
-            </section>
-            <section className="editor-card">
-              <span className="eyebrow">Accessibility checklist</span>
-              <div className="check-list editor-checks">
-                <span><CheckCircle2 aria-hidden="true" /> Heading order reviewed</span>
-                <span><CheckCircle2 aria-hidden="true" /> Captions attached</span>
-                <span><CheckCircle2 aria-hidden="true" /> Transcript available</span>
-                <span><CheckCircle2 aria-hidden="true" /> Non-drag alternative enabled</span>
-              </div>
-            </section>
-          </aside>
+          <aside className="editor-sidebar"><section className="editor-card publish-card"><span className="eyebrow">Publishing workflow</span><h2>Review and approval</h2><label><span>Current status</span><select value={status} onChange={(event)=>setStatus(event.target.value)}><option>Draft</option><option>Content review</option><option>Accessibility review</option><option>KOTC approval</option><option>Approved</option></select></label><div className="workflow-list"><span className="done"><CheckCircle2 aria-hidden="true" /> KOTC content owner assigned</span><span className={status==="Approved"?"done":""}><Users aria-hidden="true" /> KOTC approval recorded</span><span className={status==="Approved"?"done":""}><ListChecks aria-hidden="true" /> Accessibility checklist complete</span></div><button type="button" className="button primary full-width" disabled={status!=="Approved"}>Publish content</button></section><section className="editor-card"><span className="eyebrow">Accessibility checklist</span><div className="check-list editor-checks"><span><CheckCircle2 aria-hidden="true" /> Heading order reviewed</span><span><CheckCircle2 aria-hidden="true" /> Captions attached</span><span><CheckCircle2 aria-hidden="true" /> Transcript available</span><span><CheckCircle2 aria-hidden="true" /> Equivalent non-drag path enabled</span><span><CheckCircle2 aria-hidden="true" /> House topic is available in list mode</span></div></section></aside>
         </div>
       </div>
     </section>
