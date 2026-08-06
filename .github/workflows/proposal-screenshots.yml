@@ -25,7 +25,7 @@ jobs:
       - name: Upload proposal evidence
         uses: actions/upload-artifact@v4
         with:
-          name: kotc-editorial-v2-proposal-screenshots
-          path: artifacts/proposal-screenshots
+          name: kotc-brand-v3-proposal-screenshots
+          path: artifacts/proposal-screenshots-v3
           if-no-files-found: error
           retention-days: 30
