@@ -24,7 +24,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <a className="skip-link" href="#main-content">Skip to main content</a>
       <header className="site-header"><div className="container header-grid">
         <Link href="/" className="brand" aria-label="Keepers of the Circle Learning Commons home"><Image src={logoPath} alt="Keepers of the Circle" width={270} height={148} priority /></Link>
-        <nav aria-label="Primary navigation" className="primary-nav">{navItems.map(({ href, label, icon: Icon }) => <Link key={href} href={href} className={pathname === href || pathname.startsWith(`${href}/`) ? "active" : undefined}><Icon aria-hidden="true" /><span>{label}</span></Link>)}</nav>
+        <nav aria-label="Primary navigation" className="primary-nav">{navItems.map(({ href, label, icon: Icon }) => <Link key={href} href={href} aria-label={label} className={pathname === href || pathname.startsWith(`${href}/`) ? "active" : undefined}><Icon aria-hidden="true" /><span>{label}</span></Link>)}</nav>
         <AccessibilityToolbar />
       </div></header>
       <main id="main-content">{children}</main>
