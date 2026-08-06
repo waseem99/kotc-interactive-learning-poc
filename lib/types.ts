@@ -29,6 +29,14 @@ export type Chapter = {
   topicIds: string[];
 };
 
+export type ModuleCard = {
+  id: string;
+  title: string;
+  summary: string;
+  lessons: number;
+  estimatedTime: string;
+};
+
 export type CertificateRecord = {
   id: string;
   learnerName: string;
