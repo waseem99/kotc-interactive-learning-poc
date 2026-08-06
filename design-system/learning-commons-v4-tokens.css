@@ -1,0 +1,36 @@
+/* KOTC Learning Commons V4 — review-stage semantic tokens */
+:root {
+  --kotc-navy-950: #0B2F4A;
+  --kotc-navy-800: #154B73;
+  --kotc-lake-600: #2F6D91;
+  --kotc-sky-200: #D8EEF5;
+  --kotc-sky-100: #EDF7FB;
+  --kotc-gold-500: #E3B320;
+  --kotc-gold-100: #FFF5C9;
+  --kotc-red-600: #A93D4A;
+  --kotc-red-100: #F9E7EA;
+  --kotc-ink: #152A38;
+  --kotc-muted-ink: #5D6B75;
+  --kotc-warm-white: #FAF9F6;
+  --kotc-white: #FFFFFF;
+  --kotc-border: #D7E0E5;
+  --kotc-success: #2E7D5B;
+
+  --surface-page: var(--kotc-white);
+  --surface-subtle: var(--kotc-warm-white);
+  --surface-learning: var(--kotc-sky-100);
+  --surface-active: var(--kotc-gold-100);
+  --text-primary: var(--kotc-ink);
+  --text-secondary: var(--kotc-muted-ink);
+  --action-primary: var(--kotc-navy-800);
+  --action-primary-hover: var(--kotc-navy-950);
+  --focus-ring: var(--kotc-gold-500);
+
+  --radius-control: 10px;
+  --radius-card: 14px;
+  --radius-panel: 18px;
+  --shadow-card: 0 8px 24px rgba(11, 47, 74, 0.08);
+  --shadow-elevated: 0 18px 48px rgba(11, 47, 74, 0.12);
+  --content-max: 1240px;
+  --reading-max: 720px;
+}
