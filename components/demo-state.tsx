@@ -96,6 +96,12 @@ export function DemoStateProvider({ children }: { children: ReactNode }) {
     setState((current) => ({ ...current, ...patch }));
   }, []);
 
+  const markLessonVisited = useCallback(() => {
+    setState((current) =>
+      current.lessonVisited ? current : { ...current, lessonVisited: true },
+    );
+  }, []);
+
   const value = useMemo<DemoStateContextValue>(
     () => ({
       ...state,
@@ -112,7 +118,7 @@ export function DemoStateProvider({ children }: { children: ReactNode }) {
             ? current.completedTopics
             : [...current.completedTopics, topicId],
         })),
-      markLessonVisited: () => update({ lessonVisited: true }),
+      markLessonVisited,
       markActivityComplete: () =>
         setState((current) => ({
           ...current,
@@ -123,7 +129,7 @@ export function DemoStateProvider({ children }: { children: ReactNode }) {
         })),
       resetDemo: () => setState(defaultState),
     }),
-    [ready, state, update],
+    [markLessonVisited, ready, state, update],
   );
 
   return <DemoStateContext.Provider value={value}>{children}</DemoStateContext.Provider>;
