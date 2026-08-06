@@ -30,13 +30,19 @@ test("learner can move from role selection to the interactive house", async ({ p
 test("display preferences persist after refresh", async ({ page }) => {
   await page.goto("/");
   await waitForDemoReady(page);
+
+  const root = page.locator("html");
+  const initialTheme = await root.getAttribute("data-theme");
+  const expectedTheme = initialTheme === "system" ? "light" : initialTheme === "light" ? "dark" : "system";
+
   await page.locator("details.display-settings > summary").click();
-  await page.getByRole("button", { name: /theme: system/i }).click();
+  await page.getByRole("button", { name: /theme:/i }).click();
   await page.getByRole("button", { name: /text size: standard/i }).click();
-  await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
-  await expect(page.locator("html")).toHaveAttribute("data-text-size", "large");
+  await expect(root).toHaveAttribute("data-theme", expectedTheme);
+  await expect(root).toHaveAttribute("data-text-size", "large");
+
   await page.reload();
   await waitForDemoReady(page);
-  await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
-  await expect(page.locator("html")).toHaveAttribute("data-text-size", "large");
+  await expect(root).toHaveAttribute("data-theme", expectedTheme);
+  await expect(root).toHaveAttribute("data-text-size", "large");
 });
