@@ -16,25 +16,9 @@ export default function DashboardPage() {
   return (
     <section className="v5-page">
       <div className="container">
-        <header className="v5-page-head">
-          <div>
-            <span className="v5-kicker"><HardHat aria-hidden="true" /> {roleLabel}</span>
-            <h1>Welcome back. Continue your course.</h1>
-            <p>Your progress is saved in this demonstration browser so you can leave and return to the same place.</p>
-          </div>
-          <Link href="/role-selection" className="v5-text-link">Change pathway</Link>
-        </header>
+        <header className="v5-page-head"><div><span className="v5-kicker"><HardHat aria-hidden="true" /> {roleLabel}</span><h1>Welcome back. Continue your course.</h1><p>Your progress is saved in this demonstration browser so you can leave and return to the same place.</p></div><Link href="/role-selection" className="v5-text-link">Change pathway</Link></header>
 
-        <section className="v5-resume-card" aria-label="Resume learning">
-          <ProgressRing value={progress} label="course progress" />
-          <div>
-            <span className="v5-kicker">Next step</span>
-            <h2>{currentChapter.title}</h2>
-            <p>Continue with the interactive house and the topic currently in progress.</p>
-            <div className="v5-meta"><span><BookOpen aria-hidden="true" /> Chapter {currentChapter.number} of 6</span><span><Clock3 aria-hidden="true" /> Up to {course.estimatedMinutes} minutes total</span></div>
-          </div>
-          <Link href="/house" className="button primary">Continue learning <ArrowRight aria-hidden="true" /></Link>
-        </section>
+        <section className="v5-resume-card" aria-label="Resume learning"><ProgressRing value={progress} label="course progress" /><div><span className="v5-kicker">Next step</span><h2>{currentChapter.title}</h2><p>Continue with the interactive house and the topic currently in progress.</p><div className="v5-meta"><span><BookOpen aria-hidden="true" /> Chapter {currentChapter.number} of 6</span><span><Clock3 aria-hidden="true" /> Up to {course.estimatedMinutes} minutes total</span></div></div><Link href="/house" className="button primary">Continue learning <ArrowRight aria-hidden="true" /></Link></section>
 
         <div className="v5-dashboard-grid">
           <section>
@@ -43,35 +27,12 @@ export default function DashboardPage() {
               {chapters.map((chapter) => {
                 const done = chapter.topicIds.every((id) => completedTopics.includes(id));
                 const active = chapter.id === currentChapter.id && !done;
-                return (
-                  <li key={chapter.id} className={done ? "done" : active ? "active" : ""}>
-                    <div className="v5-chapter-number">{done ? <CheckCircle2 aria-hidden="true" /> : chapter.number}</div>
-                    <div className="v5-chapter-copy">
-                      <div><h3>{chapter.title}</h3>{chapter.pathwayMode === "variant" ? <span className="v5-pathway-tag">Tailored for {roleLabel.toLowerCase()}</span> : null}</div>
-                      <p>{chapter.summary}</p>
-                      <span>{chapter.estimatedMinutes} minutes · {chapter.topicIds.length} required topic{chapter.topicIds.length === 1 ? "" : "s"}</span>
-                    </div>
-                    <span className="v5-status">{done ? "Completed" : active ? "In progress" : "Not started"}</span>
-                  </li>
-                );
+                return <li key={chapter.id} className={done ? "done" : active ? "active" : ""}><div className="v5-chapter-number">{done ? <CheckCircle2 aria-hidden="true" /> : chapter.number}</div><div className="v5-chapter-copy"><div><h3>{chapter.title}</h3>{chapter.pathwayMode === "variant" ? <span className="v5-pathway-tag">Tailored for {roleLabel.toLowerCase()}</span> : null}</div><p>{chapter.summary}</p><span>{chapter.estimatedMinutes} minutes · {chapter.topicIds.length} required topic{chapter.topicIds.length === 1 ? "" : "s"}</span></div><div className="v5-chapter-actions"><span className="v5-status">{done ? "Completed" : active ? "In progress" : "Not started"}</span><Link href={`/chapter/${chapter.id}`} aria-label={`Open chapter ${chapter.number}: ${chapter.title}`}><ArrowRight aria-hidden="true" /></Link></div></li>;
               })}
             </ol>
           </section>
 
-          <aside className="v5-side-stack">
-            <article className="v5-side-card">
-              <Award aria-hidden="true" />
-              <span className="v5-kicker">Completion rule</span>
-              <h2>Complete all required content.</h2>
-              <p>There are no grades, scores, assessments or prerequisites. Completion results in a Passed/Completed status and certificate.</p>
-              <Link href="/completion" className="button secondary">Preview certificate</Link>
-            </article>
-            <article className="v5-side-card soft">
-              <RotateCcw aria-hidden="true" />
-              <strong>Resume later</strong>
-              <p>Production accounts will save progress securely so learners can continue over multiple sessions.</p>
-            </article>
-          </aside>
+          <aside className="v5-side-stack"><article className="v5-side-card"><Award aria-hidden="true" /><span className="v5-kicker">Completion rule</span><h2>Complete all required content.</h2><p>There are no grades, scores, assessments or prerequisites. Completion results in a Passed/Completed status and certificate.</p><Link href="/completion" className="button secondary">Preview certificate</Link></article><article className="v5-side-card soft"><RotateCcw aria-hidden="true" /><strong>Resume later</strong><p>Production accounts will save progress securely so learners can continue over multiple sessions.</p></article></aside>
         </div>
       </div>
     </section>
