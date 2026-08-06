@@ -9,3 +9,20 @@
 .learning-commons-v5 .v5-resume-card p {
   color: #ffffff;
 }
+
+@media (max-width: 720px) {
+  .learning-commons-v5 .site-header .display-settings {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    justify-self: end;
+    position: relative;
+    z-index: 120;
+  }
+
+  .learning-commons-v5 .site-header .display-settings > summary,
+  .learning-commons-v5 .site-header .display-settings-panel {
+    position: relative;
+    z-index: 121;
+  }
+}
