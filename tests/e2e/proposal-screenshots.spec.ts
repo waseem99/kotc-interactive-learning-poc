@@ -2,7 +2,7 @@ import { mkdir } from "node:fs/promises";
 import path from "node:path";
 import { expect, test, type Page } from "@playwright/test";
 
-const outputDir = path.join(process.cwd(), "artifacts", "proposal-screenshots");
+const outputDir = path.join(process.cwd(), "artifacts", "proposal-screenshots-v3");
 
 const demoState = {
   role: "learner",
@@ -44,29 +44,31 @@ test.describe("proposal screenshot evidence", () => {
     await mkdir(outputDir, { recursive: true });
   });
 
-  test("captures editorial v2 desktop and mobile evidence", async ({ page }) => {
+  test("captures KOTC brand v3 desktop and mobile evidence", async ({ page }) => {
     await preparePage(page);
 
     await page.setViewportSize({ width: 1440, height: 1000 });
-    await capture(page, "/", "01-home-editorial-v2.png");
-    await capture(page, "/dashboard", "02-learner-dashboard-desktop.png");
-    await capture(page, "/house", "03-interactive-house-desktop.png");
+    await capture(page, "/", "01-home-brand-v3.png");
+    await capture(page, "/design-system", "02-brand-system-evidence.png");
+    await capture(page, "/dashboard", "03-learner-dashboard-desktop.png");
+    await capture(page, "/house", "04-interactive-house-desktop.png");
 
     await page.getByRole("button", { name: "Accessible list" }).click();
     await page.screenshot({
-      path: path.join(outputDir, "04-interactive-house-list-view.png"),
+      path: path.join(outputDir, "05-interactive-house-list-view.png"),
       fullPage: true,
       animations: "disabled",
     });
 
-    await capture(page, "/lesson/lower-impact-materials", "05-lesson-and-transcript.png");
-    await capture(page, "/activity/material-match", "06-accessible-activity.png");
-    await capture(page, "/admin", "07-administrator-dashboard.png");
-    await capture(page, "/admin/content-editor", "08-cms-content-editor.png");
-    await capture(page, "/completion", "09-completion-certificate.png");
+    await capture(page, "/lesson/lower-impact-materials", "06-lesson-and-transcript.png");
+    await capture(page, "/activity/material-match", "07-accessible-activity.png");
+    await capture(page, "/admin", "08-administrator-dashboard.png");
+    await capture(page, "/admin/content-editor", "09-cms-content-editor.png");
+    await capture(page, "/completion", "10-completion-certificate.png");
 
     await page.setViewportSize({ width: 390, height: 844 });
-    await capture(page, "/dashboard", "10-learner-dashboard-mobile.png");
-    await capture(page, "/house", "11-interactive-house-mobile.png");
+    await capture(page, "/", "11-home-mobile.png");
+    await capture(page, "/dashboard", "12-learner-dashboard-mobile.png");
+    await capture(page, "/house", "13-interactive-house-mobile.png");
   });
 });
