@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "../design-system/tokens.css";
 @import "../design-system/brand-v3-tokens.css";
+@import "../design-system/learning-commons-v4-tokens.css";
 @import "../styles/01-base.css";
 @import "../styles/02-home-auth.css";
 @import "../styles/03-dashboard-house.css";
@@ -12,3 +13,4 @@
 @import "../styles/09-editorial-v2-a11y-fixes.css";
 @import "../styles/09-brand-v3.css";
 @import "../styles/10-brand-v3-refinements.css";
+@import "../styles/11-learning-commons-v4.css";
