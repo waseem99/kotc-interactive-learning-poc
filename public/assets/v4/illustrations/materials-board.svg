@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" fill="none">
+<rect width="1200" height="760" rx="32" fill="#EDF7FB"/>
+<rect x="60" y="60" width="1080" height="640" rx="24" fill="#FFFFFF" stroke="#D7E0E5" stroke-width="4"/>
+<g>
+<rect x="110" y="130" width="220" height="220" rx="18" fill="#B98856"/><path d="M130 160H310M130 200H290M130 240H310M130 280H270" stroke="#E8C69B" stroke-width="8" stroke-linecap="round"/>
+<rect x="380" y="130" width="220" height="220" rx="18" fill="#D7C7A7"/><path d="M405 160L575 320M405 320L575 160M420 190L560 310" stroke="#B7A684" stroke-width="7"/>
+<rect x="650" y="130" width="220" height="220" rx="18" fill="#8D969D"/><path d="M675 160H845M675 200H825M675 240H845M675 280H805" stroke="#C4CBD0" stroke-width="8" stroke-linecap="round"/>
+<rect x="920" y="130" width="170" height="220" rx="18" fill="#B8C9D2"/><path d="M948 170L1060 310M948 310L1060 170" stroke="#E4EDF2" stroke-width="7"/>
+</g>
+<g font-family="Arial, sans-serif">
+<text x="110" y="410" font-size="28" font-weight="700" fill="#152A38">Reclaimed wood</text><text x="110" y="450" font-size="20" fill="#5D6B75">Durable reuse option</text>
+<text x="380" y="410" font-size="28" font-weight="700" fill="#152A38">Fibre insulation</text><text x="380" y="450" font-size="20" fill="#5D6B75">Low-impact thermal layer</text>
+<text x="650" y="410" font-size="28" font-weight="700" fill="#152A38">Recycled steel</text><text x="650" y="450" font-size="20" fill="#5D6B75">High recycled content</text>
+<text x="920" y="410" font-size="28" font-weight="700" fill="#152A38">Efficient glazing</text><text x="920" y="450" font-size="20" fill="#5D6B75">Envelope performance</text>
+</g>
+<rect x="110" y="520" width="980" height="110" rx="16" fill="#0B2F4A"/>
+<circle cx="170" cy="575" r="32" fill="#E3B320"/><path d="M155 575L168 588L190 562" stroke="#0B2F4A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="230" y="568" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">Activity-ready visual language</text>
+<text x="230" y="602" font-family="Arial, sans-serif" font-size="18" fill="#D8EEF5">Each material remains identifiable by name, pattern, and description—not colour alone.</text>
+</svg>
