@@ -1,16 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowRight,
-  Award,
-  BookOpen,
-  Building2,
-  CheckCircle2,
-  Clock3,
-  HardHat,
-  Sparkles,
-} from "lucide-react";
+import { ArrowRight, Award, BookOpen, Building2, CheckCircle2, Clock3, HardHat, Sparkles } from "lucide-react";
 import { useDemoState } from "@/components/demo-state";
 import { ProgressRing } from "@/components/progress-ring";
 import { StatusBadge, type Status } from "@/components/status-badge";
@@ -28,8 +20,8 @@ export default function DashboardPage() {
         <div className="dashboard-heading">
           <div>
             <span className="eyebrow"><HardHat aria-hidden="true" /> {roleLabel}</span>
-            <h1>Welcome back. Your next step is ready.</h1>
-            <p>This illustrative dashboard brings progress, learning modules, resources, and completion status into one clear view.</p>
+            <h1>Your next practical learning step is ready.</h1>
+            <p>Continue the current chapter, understand what remains, and access supporting resources without searching through a dense dashboard.</p>
           </div>
           <Link href="/role-selection" className="text-link">Change pathway</Link>
         </div>
@@ -37,9 +29,9 @@ export default function DashboardPage() {
         <div className="dashboard-hero-card">
           <ProgressRing value={progress} label="overall progress" />
           <div className="dashboard-hero-copy">
-            <span className="status-kicker"><Sparkles aria-hidden="true" /> Continue where you left off</span>
+            <span className="status-kicker"><Sparkles aria-hidden="true" /> Continue learning</span>
             <h2>Green and healthy building foundations</h2>
-            <p>Explore lower-impact materials through an interactive house, a short lesson, and an accessible activity.</p>
+            <p>Explore lower-impact materials through the interactive house, a short lesson, and an accessible sorting activity.</p>
             <div className="meta-row">
               <span><BookOpen aria-hidden="true" /> Chapter 1 of 3</span>
               <span><Clock3 aria-hidden="true" /> About 20 minutes remaining</span>
@@ -49,18 +41,15 @@ export default function DashboardPage() {
             </Link>
           </div>
           <div className="dashboard-illustration" aria-hidden="true">
-            <div className="mini-house-roof" />
-            <div className="mini-house-body">
-              <span /><span className="accent" /><span /><span />
-            </div>
+            <Image src="/assets/v4/illustrations/house-cutaway.svg" alt="" width={1200} height={800} />
           </div>
         </div>
 
         <div className="dashboard-layout">
           <div>
             <div className="section-title-row">
-              <div><span className="eyebrow">Your program</span><h2>Learning modules</h2></div>
-              <span className="illustrative-label">Illustrative content</span>
+              <div><span className="eyebrow">Your learning trail</span><h2>Program progress</h2></div>
+              <span className="illustrative-label">Illustrative curriculum</span>
             </div>
             <div className="module-list">
               {modules.map((module, index) => {
@@ -83,21 +72,21 @@ export default function DashboardPage() {
           <aside className="dashboard-side" aria-label="Progress and certificate information">
             <article className="side-card certificate-card">
               <span className="side-icon"><Award aria-hidden="true" /></span>
-              <span className="eyebrow">Certificate progress</span>
-              <h2>{activityComplete ? "Concept certificate unlocked" : "Complete all required learning"}</h2>
-              <p>{activityComplete ? "The demo completion state is ready to view." : "Your certificate will become available after required lessons and activities are complete."}</p>
+              <span className="eyebrow">Completion evidence</span>
+              <h2>{activityComplete ? "Sample completion unlocked" : "Complete required learning"}</h2>
+              <p>{activityComplete ? "The illustrative completion and certificate state is ready to view." : "Completion evidence becomes available after the required lesson and activity are finished."}</p>
               {activityComplete ? (
                 <Link href="/completion" className="button secondary full-width">View completion concept</Link>
               ) : (
                 <div className="check-list">
-                  <span><CheckCircle2 aria-hidden="true" /> 1 topic completed</span>
+                  <span><CheckCircle2 aria-hidden="true" /> Topic progress saved locally</span>
                   <span><Building2 aria-hidden="true" /> Interactive chapter in progress</span>
                 </div>
               )}
             </article>
             <article className="side-card device-note">
               <strong>Demo privacy note</strong>
-              <p>Your selected role, display preferences, and progress are stored only in this browser for demonstration purposes.</p>
+              <p>Your pathway, display preferences, and progress are stored only in this browser for the demonstration.</p>
             </article>
           </aside>
         </div>
