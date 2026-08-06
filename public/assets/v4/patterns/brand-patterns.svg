@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:none"><defs><symbol id="circle-rays" viewBox="0 0 320 320">
+<g transform="translate(160 160)">
+  <g stroke="#E3B320" stroke-width="8" stroke-linecap="round">
+    <path d="M0 -144V-124" transform="rotate(0)"/><path d="M0 -144V-124" transform="rotate(15)"/><path d="M0 -144V-124" transform="rotate(30)"/><path d="M0 -144V-124" transform="rotate(45)"/><path d="M0 -144V-124" transform="rotate(60)"/><path d="M0 -144V-124" transform="rotate(75)"/><path d="M0 -144V-124" transform="rotate(90)"/><path d="M0 -144V-124" transform="rotate(105)"/><path d="M0 -144V-124" transform="rotate(120)"/><path d="M0 -144V-124" transform="rotate(135)"/><path d="M0 -144V-124" transform="rotate(150)"/><path d="M0 -144V-124" transform="rotate(165)"/><path d="M0 -144V-124" transform="rotate(180)"/><path d="M0 -144V-124" transform="rotate(195)"/><path d="M0 -144V-124" transform="rotate(210)"/><path d="M0 -144V-124" transform="rotate(225)"/><path d="M0 -144V-124" transform="rotate(240)"/><path d="M0 -144V-124" transform="rotate(255)"/><path d="M0 -144V-124" transform="rotate(270)"/><path d="M0 -144V-124" transform="rotate(285)"/><path d="M0 -144V-124" transform="rotate(300)"/><path d="M0 -144V-124" transform="rotate(315)"/><path d="M0 -144V-124" transform="rotate(330)"/><path d="M0 -144V-124" transform="rotate(345)"/>
+  </g>
+  <circle r="104" fill="#FFF5C9"/>
+  <circle r="78" fill="#FFFFFF" stroke="#E3B320" stroke-width="10"/>
+  <circle r="48" fill="#D8EEF5"/>
+  <circle r="26" fill="#154B73"/>
+</g></symbol><symbol id="horizon-divider" viewBox="0 0 1600 300">
+<defs><pattern id="dots" width="52" height="52" patternUnits="userSpaceOnUse">
+<circle cx="13" cy="13" r="7" fill="#2F6D91" fill-opacity=".55"/><circle cx="40" cy="35" r="11" fill="#2F6D91" fill-opacity=".35"/></pattern></defs>
+<path d="M0 95C240 10 520 22 800 88C1080 154 1320 156 1600 86V242H0V95Z" fill="#154B73"/>
+<path d="M0 95C240 10 520 22 800 88C1080 154 1320 156 1600 86V242H0V95Z" fill="url(#dots)"/>
+<path d="M0 122C280 42 520 52 820 113C1110 172 1340 170 1600 120" fill="none" stroke="#FFFFFF" stroke-width="12"/>
+<path d="M0 190C290 105 600 118 900 165C1180 208 1390 242 1600 258V300H0V190Z" fill="#E3B320"/>
+<path d="M0 218C300 146 590 140 880 184C1140 222 1340 220 1600 206V300H0V218Z" fill="#A93D4A"/>
+</symbol><symbol id="horizon-divider-compact" viewBox="0 0 1200 120">
+<path d="M0 36C220 4 410 14 600 48C790 82 980 84 1200 42V100H0V36Z" fill="#154B73"/>
+<path d="M0 48C230 18 410 24 620 55C820 84 1000 92 1200 66" fill="none" stroke="#FFFFFF" stroke-width="6"/>
+<path d="M0 80C230 48 470 52 720 78C920 98 1070 106 1200 108V120H0V80Z" fill="#E3B320"/>
+<path d="M0 94C220 70 440 66 660 88C860 108 1040 110 1200 98V120H0V94Z" fill="#A93D4A"/>
+</symbol><symbol id="dot-texture" viewBox="0 0 160 160">
+<rect width="160" height="160" fill="#0B2F4A"/>
+<g fill="#2F6D91" fill-opacity=".48">
+  <circle cx="18" cy="18" r="9"/><circle cx="58" cy="18" r="5"/><circle cx="104" cy="18" r="11"/><circle cx="146" cy="18" r="7"/>
+  <circle cx="34" cy="58" r="13"/><circle cx="82" cy="58" r="7"/><circle cx="126" cy="58" r="10"/>
+  <circle cx="16" cy="106" r="6"/><circle cx="58" cy="106" r="12"/><circle cx="106" cy="106" r="7"/><circle cx="148" cy="106" r="13"/>
+  <circle cx="34" cy="146" r="10"/><circle cx="82" cy="146" r="5"/><circle cx="126" cy="146" r="9"/>
+</g></symbol><symbol id="dot-texture-sky" viewBox="0 0 160 160">
+<rect width="160" height="160" fill="#EDF7FB"/>
+<g fill="#D8EEF5">
+  <circle cx="18" cy="18" r="9"/><circle cx="58" cy="18" r="5"/><circle cx="104" cy="18" r="11"/><circle cx="146" cy="18" r="7"/>
+  <circle cx="34" cy="58" r="13"/><circle cx="82" cy="58" r="7"/><circle cx="126" cy="58" r="10"/>
+  <circle cx="16" cy="106" r="6"/><circle cx="58" cy="106" r="12"/><circle cx="106" cy="106" r="7"/><circle cx="148" cy="106" r="13"/>
+  <circle cx="34" cy="146" r="10"/><circle cx="82" cy="146" r="5"/><circle cx="126" cy="146" r="9"/>
+</g></symbol></defs></svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:none"><defs><symbol id="workshop-collaboration" viewBox="0 0 1200 800">
+<rect width="1200" height="800" rx="32" fill="#FAF9F6"/>
+<rect x="42" y="42" width="1116" height="716" rx="24" fill="#FFFFFF" stroke="#D7E0E5" stroke-width="4"/>
+<path d="M90 248L300 126L510 248V590H90V248Z" fill="#EDF7FB" stroke="#154B73" stroke-width="12"/>
+<path d="M170 590V300H430V590M300 300V590" stroke="#2F6D91" stroke-width="8"/>
+<rect x="620" y="118" width="440" height="188" rx="18" fill="#EDF7FB"/>
+<path d="M680 250V182L820 108L960 182V250" stroke="#154B73" stroke-width="10"/>
+<rect x="160" y="555" width="760" height="90" rx="18" fill="#0B2F4A"/>
+<g>
+<circle cx="340" cy="440" r="52" fill="#B87555"/><path d="M280 438C288 365 392 356 400 438" fill="#0B2F4A"/><path d="M250 555C264 480 416 480 430 555" fill="#A93D4A"/>
+<circle cx="555" cy="425" r="52" fill="#D49B79"/><path d="M495 422C503 350 607 345 615 422" fill="#154B73"/><path d="M465 555C479 468 631 468 645 555" fill="#2F6D91"/>
+<circle cx="765" cy="444" r="52" fill="#8F5B43"/><path d="M705 440C713 368 817 358 825 440" fill="#0B2F4A"/><path d="M675 555C689 483 841 483 855 555" fill="#E3B320"/>
+</g>
+<rect x="260" y="515" width="170" height="52" rx="10" fill="#B98856"/>
+<rect x="470" y="505" width="150" height="62" rx="10" fill="#D7C7A7"/>
+<rect x="675" y="515" width="130" height="52" rx="10" fill="#A7B0B8"/>
+<circle cx="1020" cy="640" r="70" fill="#FFF5C9"/><path d="M990 640L1012 662L1050 618" stroke="#154B73" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol id="timber-framing" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#EEDCC2"/>
+<path d="M0 120H1200M0 260H1200M0 400H1200M0 540H1200M0 680H1200" stroke="#D0A66E" stroke-width="18"/>
+<path d="M120 0V800M330 0V800M540 0V800M750 0V800M960 0V800M1140 0V800" stroke="#B8793F" stroke-width="26"/>
+<path d="M0 800L540 0M220 800L750 0M520 800L1040 0M820 800L1200 230" stroke="#8B5A2E" stroke-width="18" opacity=".75"/>
+<rect x="390" y="225" width="420" height="350" fill="#EDF7FB" stroke="#154B73" stroke-width="18"/>
+<path d="M600 225V575M390 400H810" stroke="#2F6D91" stroke-width="10"/>
+<rect x="70" y="620" width="1060" height="118" rx="18" fill="#0B2F4A" fill-opacity=".9"/>
+<path d="M120 680H560M120 710H430" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+<circle cx="1040" cy="678" r="34" fill="#E3B320"/>
+</symbol><symbol id="northern-landscape" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#EDF7FB"/>
+<circle cx="970" cy="150" r="92" fill="#FFF5C9"/>
+<path d="M0 420L220 240L400 360L590 180L790 360L980 230L1200 410V800H0V420Z" fill="#8EAA9A"/>
+<path d="M0 500L220 330L410 470L610 260L820 480L1020 340L1200 470V800H0V500Z" fill="#5F8270"/>
+<path d="M0 580C210 510 400 520 590 575C770 628 980 640 1200 570V800H0V580Z" fill="#2F6D91"/>
+<path d="M0 640C220 585 430 590 620 632C820 676 1010 690 1200 650V800H0V640Z" fill="#154B73"/>
+<g fill="#355F4A">
+<path d="M60 520L34 600H86L60 520Z"/><path d="M150 520L124 600H176L150 520Z"/><path d="M240 520L214 600H266L240 520Z"/><path d="M330 520L304 600H356L330 520Z"/><path d="M420 520L394 600H446L420 520Z"/><path d="M510 520L484 600H536L510 520Z"/><path d="M600 520L574 600H626L600 520Z"/><path d="M690 520L664 600H716L690 520Z"/><path d="M780 520L754 600H806L780 520Z"/><path d="M870 520L844 600H896L870 520Z"/><path d="M960 520L934 600H986L960 520Z"/><path d="M1050 520L1024 600H1076L1050 520Z"/><path d="M1140 520L1114 600H1166L1140 520Z"/>
+</g>
+<path d="M0 700C260 650 500 660 750 700C940 730 1070 735 1200 720" stroke="#FFFFFF" stroke-width="9" opacity=".75"/>
+</symbol><symbol id="house-roof-detail" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#EDF7FB"/>
+<path d="M130 520L600 140L1070 520" fill="#B98856" stroke="#0B2F4A" stroke-width="24" stroke-linejoin="round"/>
+<path d="M218 520L600 220L982 520" fill="#FAF9F6" stroke="#154B73" stroke-width="14"/>
+<path d="M270 520L600 274L930 520" fill="#FFF5C9" stroke="#E3B320" stroke-width="12"/>
+<path d="M330 520L600 328L870 520" fill="#D8EEF5" stroke="#2F6D91" stroke-width="12"/>
+<rect x="120" y="520" width="960" height="190" fill="#FFFFFF" stroke="#0B2F4A" stroke-width="20"/>
+<path d="M240 710V560H480V710M720 710V560H960V710" stroke="#2F6D91" stroke-width="14"/>
+<g stroke="#8B5A2E" stroke-width="8" opacity=".75"><path d="M220 500L600 150"/><path d="M315 500L600 150"/><path d="M410 500L600 150"/><path d="M505 500L600 150"/><path d="M600 500L600 150"/><path d="M695 500L600 150"/><path d="M790 500L600 150"/><path d="M885 500L600 150"/><path d="M980 500L600 150"/></g>
+</symbol><symbol id="insulation-detail" viewBox="0 0 1200 800">
+<rect width="1200" height="800" fill="#FAF9F6"/>
+<rect x="70" y="70" width="1060" height="660" rx="28" fill="#FFFFFF" stroke="#D7E0E5" stroke-width="4"/>
+<g stroke="#B8793F" stroke-width="24"><path d="M180 120V680M430 120V680M680 120V680M930 120V680"/><path d="M130 170H1070M130 630H1070"/></g>
+<g fill="#D7C7A7">
+<path d="M205 190C250 150 330 170 350 240C380 320 305 355 230 330C170 310 160 235 205 190Z"/>
+<path d="M468 205C520 160 605 180 625 255C650 330 580 365 500 340C445 320 420 250 468 205Z"/>
+<path d="M720 190C775 150 860 178 875 255C895 330 820 370 748 342C690 320 675 235 720 190Z"/>
+<path d="M962 210C1008 170 1080 195 1090 260C1105 330 1045 365 985 345C930 325 922 250 962 210Z"/>
+<path d="M208 420C270 375 350 405 360 485C370 555 300 590 235 565C175 545 160 465 208 420Z"/>
+<path d="M468 430C530 390 610 420 620 500C630 565 560 595 500 575C440 555 425 475 468 430Z"/>
+<path d="M718 420C780 380 860 410 875 488C890 560 820 595 755 570C695 550 675 465 718 420Z"/>
+<path d="M965 435C1015 395 1085 420 1095 492C1105 560 1045 590 990 570C935 550 925 475 965 435Z"/>
+</g>
+<rect x="130" y="642" width="940" height="52" rx="12" fill="#0B2F4A"/>
+<path d="M170 668H580" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/>
+<circle cx="1025" cy="668" r="18" fill="#E3B320"/>
+</symbol></defs></svg>
