@@ -8,8 +8,8 @@ export default function HousePage() {
         <div className="page-intro split-intro">
           <div>
             <span className="eyebrow"><Building2 aria-hidden="true" /> Interactive chapter</span>
-            <h1>Explore green-building topics through the house.</h1>
-            <p>Select a numbered location to understand the topic, estimated time, and next action. Switch to the structured list at any time for an equivalent experience.</p>
+            <h1>Navigate a complete learning chapter through the house.</h1>
+            <p>Select a numbered green-building topic to understand its purpose, estimated time, and next action. Switch to the structured list at any time for an equivalent experience.</p>
           </div>
           <div className="access-note" aria-label="Supported interaction methods">
             <span><Keyboard aria-hidden="true" /> Keyboard</span>
