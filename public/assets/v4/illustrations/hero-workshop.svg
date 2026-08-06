@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none">
+<rect width="1600" height="1000" rx="40" fill="#FAF9F6"/>
+<rect x="72" y="72" width="1456" height="856" rx="32" fill="#FFFFFF" stroke="#D7E0E5" stroke-width="4"/>
+<path d="M1080 72H1496C1514 72 1528 86 1528 104V896C1528 914 1514 928 1496 928H1080V72Z" fill="#EDF7FB"/>
+<circle cx="1360" cy="182" r="116" fill="#FFF5C9"/>
+<g stroke="#E3B320" stroke-width="10" stroke-linecap="round" opacity=".85">
+<path d="M1360 26V8" transform="rotate(0 1360 182)"/><path d="M1360 26V8" transform="rotate(20 1360 182)"/><path d="M1360 26V8" transform="rotate(40 1360 182)"/><path d="M1360 26V8" transform="rotate(60 1360 182)"/><path d="M1360 26V8" transform="rotate(80 1360 182)"/><path d="M1360 26V8" transform="rotate(100 1360 182)"/><path d="M1360 26V8" transform="rotate(120 1360 182)"/><path d="M1360 26V8" transform="rotate(140 1360 182)"/><path d="M1360 26V8" transform="rotate(160 1360 182)"/><path d="M1360 26V8" transform="rotate(180 1360 182)"/><path d="M1360 26V8" transform="rotate(200 1360 182)"/><path d="M1360 26V8" transform="rotate(220 1360 182)"/><path d="M1360 26V8" transform="rotate(240 1360 182)"/><path d="M1360 26V8" transform="rotate(260 1360 182)"/><path d="M1360 26V8" transform="rotate(280 1360 182)"/><path d="M1360 26V8" transform="rotate(300 1360 182)"/><path d="M1360 26V8" transform="rotate(320 1360 182)"/><path d="M1360 26V8" transform="rotate(340 1360 182)"/>
+</g>
+<!-- workshop structure -->
+<path d="M160 702V264L420 126L680 264V702" stroke="#154B73" stroke-width="16" stroke-linejoin="round"/>
+<path d="M236 702V330H604V702M420 330V702" stroke="#2F6D91" stroke-width="10"/>
+<path d="M160 264H680" stroke="#154B73" stroke-width="12"/>
+<rect x="248" y="384" width="142" height="126" rx="8" fill="#D8EEF5" stroke="#154B73" stroke-width="8"/>
+<rect x="450" y="384" width="142" height="126" rx="8" fill="#FFF5C9" stroke="#154B73" stroke-width="8"/>
+<!-- work table -->
+<path d="M170 760H990L922 628H238L170 760Z" fill="#0B2F4A"/>
+<path d="M270 760L228 890M890 760L932 890" stroke="#0B2F4A" stroke-width="22" stroke-linecap="round"/>
+<!-- materials on table -->
+<rect x="328" y="586" width="170" height="58" rx="10" fill="#B98856"/>
+<path d="M346 600H480M346 616H460" stroke="#E8C69B" stroke-width="6" stroke-linecap="round"/>
+<rect x="540" y="574" width="152" height="70" rx="10" fill="#D7C7A7"/>
+<path d="M558 592L674 626M558 626L674 592" stroke="#B7A684" stroke-width="5"/>
+<rect x="738" y="584" width="126" height="60" rx="10" fill="#A7B0B8"/>
+<path d="M760 598H840M760 616H826" stroke="#6B7780" stroke-width="6" stroke-linecap="round"/>
+<!-- people -->
+<g>
+<circle cx="346" cy="456" r="54" fill="#B87555"/><path d="M286 450C292 376 402 366 408 450" fill="#0B2F4A"/>
+<path d="M252 638C264 526 430 526 442 638" fill="#A93D4A"/>
+<path d="M306 536L346 590L386 536" fill="#FFFFFF"/>
+</g>
+<g>
+<circle cx="586" cy="438" r="54" fill="#D49B79"/><path d="M524 434C532 358 642 354 650 434" fill="#154B73"/>
+<path d="M492 638C506 508 666 508 680 638" fill="#2F6D91"/>
+<path d="M548 520L586 578L624 520" fill="#FFFFFF"/>
+</g>
+<g>
+<circle cx="824" cy="458" r="54" fill="#8F5B43"/><path d="M764 452C772 378 880 370 888 452" fill="#0B2F4A"/>
+<path d="M728 638C742 528 906 528 920 638" fill="#E3B320"/>
+<path d="M786 538L824 592L862 538" fill="#FFFFFF"/>
+</g>
+<!-- plans -->
+<rect x="1066" y="352" width="354" height="274" rx="20" fill="#FFFFFF" stroke="#D7E0E5" stroke-width="5"/>
+<path d="M1122 552V424L1240 356L1358 424V552" stroke="#154B73" stroke-width="10" stroke-linejoin="round"/>
+<path d="M1156 552V452H1324V552M1240 452V552" stroke="#2F6D91" stroke-width="7"/>
+<circle cx="1420" cy="700" r="62" fill="#154B73"/>
+<path d="M1396 700L1412 716L1446 680" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- decorative floor -->
+<path d="M72 864C310 812 510 828 740 874C970 920 1240 922 1528 854V928H72V864Z" fill="#D8EEF5"/>
+</svg>

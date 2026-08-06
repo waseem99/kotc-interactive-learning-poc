@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="700" viewBox="0 0 1100 700" fill="none">
+<rect width="1100" height="700" rx="32" fill="#EDF7FB"/>
+<rect x="130" y="90" width="700" height="450" rx="24" fill="#0B2F4A"/>
+<rect x="160" y="125" width="640" height="380" rx="12" fill="#FFFFFF"/>
+<rect x="210" y="180" width="320" height="34" rx="8" fill="#154B73"/>
+<rect x="210" y="244" width="500" height="20" rx="10" fill="#D7E0E5"/>
+<rect x="210" y="286" width="450" height="20" rx="10" fill="#D7E0E5"/>
+<rect x="210" y="340" width="230" height="94" rx="16" fill="#D8EEF5"/>
+<rect x="470" y="340" width="230" height="94" rx="16" fill="#FFF5C9"/>
+<circle cx="890" cy="180" r="74" fill="#FFFFFF" stroke="#154B73" stroke-width="10"/>
+<path d="M890 132V228M842 180H938" stroke="#154B73" stroke-width="12" stroke-linecap="round"/>
+<rect x="808" y="290" width="170" height="250" rx="24" fill="#FFFFFF" stroke="#154B73" stroke-width="10"/>
+<circle cx="893" cy="500" r="10" fill="#E3B320"/>
+<path d="M168 585H790" stroke="#0B2F4A" stroke-width="16" stroke-linecap="round"/>
+<g font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#152A38">
+<text x="180" y="640">Keyboard</text><text x="380" y="640">Transcript</text><text x="590" y="640">Non-drag controls</text><text x="840" y="640">Text sizing</text>
+</g>
+<g fill="#E3B320"><circle cx="225" cy="590" r="14"/><circle cx="438" cy="590" r="14"/><circle cx="665" cy="590" r="14"/><circle cx="902" cy="590" r="14"/></g>
+</svg>

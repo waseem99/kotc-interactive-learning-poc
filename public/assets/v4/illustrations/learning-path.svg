@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="340" viewBox="0 0 1400 340" fill="none">
+<path d="M130 170H1270" stroke="#D7E0E5" stroke-width="12" stroke-linecap="round"/>
+<path d="M130 170H700" stroke="#154B73" stroke-width="12" stroke-linecap="round"/>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<g><circle cx="150" cy="170" r="54" fill="#154B73"/><path d="M126 170L144 188L178 148" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><text x="150" y="272" font-size="24" font-weight="700" fill="#152A38">Choose pathway</text></g>
+<g><circle cx="425" cy="170" r="54" fill="#154B73"/><path d="M401 170L419 188L453 148" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><text x="425" y="272" font-size="24" font-weight="700" fill="#152A38">Explore the house</text></g>
+<g><circle cx="700" cy="170" r="62" fill="#E3B320" stroke="#FFFFFF" stroke-width="12"/><text x="700" y="183" font-size="36" font-weight="800" fill="#0B2F4A">3</text><text x="700" y="272" font-size="24" font-weight="700" fill="#152A38">Complete activities</text></g>
+<g><circle cx="975" cy="170" r="54" fill="#FFFFFF" stroke="#D7E0E5" stroke-width="10"/><text x="975" y="183" font-size="34" font-weight="800" fill="#5D6B75">4</text><text x="975" y="272" font-size="24" font-weight="700" fill="#152A38">Track progress</text></g>
+<g><circle cx="1250" cy="170" r="54" fill="#FFFFFF" stroke="#D7E0E5" stroke-width="10"/><text x="1250" y="183" font-size="34" font-weight="800" fill="#5D6B75">5</text><text x="1250" y="272" font-size="24" font-weight="700" fill="#152A38">Completion evidence</text></g>
+</g></svg>

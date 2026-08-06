@@ -1,0 +1,49 @@
+name: Generate Learning Commons V4 Assets
+
+on:
+  push:
+    branches:
+      - redesign/learning-commons-v4-assets
+    paths:
+      - scripts/generate-v4-assets.py
+      - .github/workflows/generate-v4-assets.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out asset branch
+        uses: actions/checkout@v4
+        with:
+          ref: redesign/learning-commons-v4-assets
+          fetch-depth: 0
+
+      - name: Generate asset pack
+        run: python scripts/generate-v4-assets.py
+
+      - name: Validate generated files
+        run: |
+          test -f public/assets/v4/asset-pack.svg
+          test -f public/assets/v4/assets.json
+          test -f design-system/learning-commons-v4-tokens.css
+          test -f docs/V4_ASSET_MANIFEST.md
+          python -m json.tool public/assets/v4/assets.json >/dev/null
+
+      - name: Commit generated assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/assets/v4/asset-pack.svg \
+                  public/assets/v4/assets.json \
+                  design-system/learning-commons-v4-tokens.css \
+                  docs/V4_ASSET_MANIFEST.md
+          if git diff --cached --quiet; then
+            echo "Asset pack is already up to date."
+          else
+            git commit -m "assets: generate Learning Commons V4 asset pack"
+            git push origin HEAD:redesign/learning-commons-v4-assets
+          fi
