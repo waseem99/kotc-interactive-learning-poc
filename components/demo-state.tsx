@@ -15,7 +15,7 @@ import type {
   ThemePreference,
 } from "@/lib/types";
 
-const STORAGE_KEY = "kotc-poc-state-v1";
+const STORAGE_KEY = "kotc-poc-state-v2";
 
 type DemoState = {
   role: LearnerRole | null;
@@ -43,7 +43,7 @@ type DemoStateContextValue = DemoState & {
 
 const defaultState: DemoState = {
   role: null,
-  theme: "system",
+  theme: "light",
   textSize: "standard",
   reducedMotion: false,
   completedTopics: ["foundation"],
@@ -96,6 +96,12 @@ export function DemoStateProvider({ children }: { children: ReactNode }) {
     setState((current) => ({ ...current, ...patch }));
   }, []);
 
+  const markLessonVisited = useCallback(() => {
+    setState((current) =>
+      current.lessonVisited ? current : { ...current, lessonVisited: true },
+    );
+  }, []);
+
   const value = useMemo<DemoStateContextValue>(
     () => ({
       ...state,
@@ -112,7 +118,7 @@ export function DemoStateProvider({ children }: { children: ReactNode }) {
             ? current.completedTopics
             : [...current.completedTopics, topicId],
         })),
-      markLessonVisited: () => update({ lessonVisited: true }),
+      markLessonVisited,
       markActivityComplete: () =>
         setState((current) => ({
           ...current,
@@ -123,7 +129,7 @@ export function DemoStateProvider({ children }: { children: ReactNode }) {
         })),
       resetDemo: () => setState(defaultState),
     }),
-    [ready, state, update],
+    [markLessonVisited, ready, state, update],
   );
 
   return <DemoStateContext.Provider value={value}>{children}</DemoStateContext.Provider>;

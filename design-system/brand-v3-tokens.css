@@ -1,0 +1,136 @@
+/*
+ * KOTC Brand V3 working tokens.
+ * Values are derived from the supplied website reference and remain subject
+ * to replacement by KOTC-provided official brand values.
+ */
+:root {
+  --brand-navy-950: #062f4c;
+  --brand-navy-900: #083b5f;
+  --brand-navy-800: #0b4d78;
+  --brand-navy-700: #17618f;
+  --brand-blue-600: #2f6f9f;
+  --brand-blue-500: #4f86ac;
+  --brand-sky-200: #d9eff7;
+  --brand-sky-100: #eaf7fb;
+  --brand-sky-50: #f5fbfd;
+  --brand-gold-500: #f0cf3e;
+  --brand-gold-700: #8a6800;
+  --brand-gold-100: #fff4c4;
+  --brand-red-600: #b54650;
+  --brand-red-700: #85343d;
+  --brand-red-100: #f8e5e7;
+  --brand-white: #ffffff;
+  --brand-neutral-50: #f7f9fa;
+  --brand-neutral-100: #eef3f5;
+  --brand-neutral-200: #d8e3e9;
+  --brand-neutral-500: #657b8a;
+  --brand-ink: #123a59;
+  --brand-focus: #f0cf3e;
+
+  --color-page: var(--brand-white);
+  --color-card: var(--brand-white);
+  --color-card-soft: var(--brand-sky-50);
+  --color-elevated: var(--brand-white);
+  --color-text: var(--brand-ink);
+  --color-text-soft: #5b7282;
+  --color-border: #d5e2e8;
+  --color-border-strong: #9fb6c3;
+  --color-primary: var(--brand-navy-800);
+  --color-primary-strong: var(--brand-navy-950);
+  --color-primary-soft: var(--brand-sky-100);
+  --color-secondary: var(--brand-red-600);
+  --color-secondary-soft: var(--brand-red-100);
+  --color-accent: var(--brand-gold-700);
+  --color-accent-soft: var(--brand-gold-100);
+  --color-info: var(--brand-blue-600);
+  --color-success: #316b57;
+  --color-success-soft: #e5f2ec;
+  --color-warning: var(--brand-gold-700);
+  --color-warning-soft: var(--brand-gold-100);
+  --color-danger: var(--brand-red-700);
+  --color-focus: var(--brand-navy-800);
+  --shadow-sm: 0 4px 14px rgb(8 59 95 / 0.07);
+  --shadow-md: 0 18px 45px rgb(8 59 95 / 0.12);
+  --shadow-lg: 0 30px 80px rgb(8 59 95 / 0.16);
+  --radius-sm: 0.45rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.35rem;
+  --radius-pill: 999px;
+  --font-sans: Manrope, "Avenir Next", Avenir, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: Manrope, "Avenir Next", Avenir, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --content-width: 1280px;
+  --reading-width: 710px;
+  --transition: 180ms cubic-bezier(0.2, 0, 0, 1);
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --brand-white: #0b2030;
+  --brand-neutral-50: #102a3d;
+  --brand-neutral-100: #17354a;
+  --brand-neutral-200: #2c4d62;
+  --brand-sky-50: #102b3f;
+  --brand-sky-100: #16384e;
+  --brand-sky-200: #1f4a62;
+  --brand-ink: #f2f8fb;
+  --color-page: #081b29;
+  --color-card: #102a3d;
+  --color-card-soft: #15364b;
+  --color-elevated: #173b51;
+  --color-text: #f2f8fb;
+  --color-text-soft: #bfd1dc;
+  --color-border: #315269;
+  --color-border-strong: #557589;
+  --color-primary: #8fc5e2;
+  --color-primary-strong: #b7daeb;
+  --color-primary-soft: #173b52;
+  --color-secondary: #ef9ca3;
+  --color-secondary-soft: #4c2930;
+  --color-accent: #f4d85f;
+  --color-accent-soft: #433b1d;
+  --color-info: #9ac9e4;
+  --color-success: #9bc8b6;
+  --color-success-soft: #203f35;
+  --color-warning: #f4d85f;
+  --color-warning-soft: #453d1d;
+  --color-danger: #f2a6ab;
+  --color-focus: #f4d85f;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="system"] {
+    --brand-white: #0b2030;
+    --brand-neutral-50: #102a3d;
+    --brand-neutral-100: #17354a;
+    --brand-neutral-200: #2c4d62;
+    --brand-sky-50: #102b3f;
+    --brand-sky-100: #16384e;
+    --brand-sky-200: #1f4a62;
+    --brand-ink: #f2f8fb;
+    --color-page: #081b29;
+    --color-card: #102a3d;
+    --color-card-soft: #15364b;
+    --color-elevated: #173b51;
+    --color-text: #f2f8fb;
+    --color-text-soft: #bfd1dc;
+    --color-border: #315269;
+    --color-border-strong: #557589;
+    --color-primary: #8fc5e2;
+    --color-primary-strong: #b7daeb;
+    --color-primary-soft: #173b52;
+    --color-secondary: #ef9ca3;
+    --color-secondary-soft: #4c2930;
+    --color-accent: #f4d85f;
+    --color-accent-soft: #433b1d;
+    --color-info: #9ac9e4;
+    --color-success: #9bc8b6;
+    --color-success-soft: #203f35;
+    --color-warning: #f4d85f;
+    --color-warning-soft: #453d1d;
+    --color-danger: #f2a6ab;
+    --color-focus: #f4d85f;
+    color-scheme: dark;
+  }
+}
