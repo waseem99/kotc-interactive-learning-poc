@@ -1,22 +1,38 @@
 export type LearnerRole = "learner" | "employer";
 export type ThemePreference = "system" | "light" | "dark";
 export type TextSizePreference = "standard" | "large" | "xlarge";
+export type ProgressStatus = "not-started" | "in-progress" | "completed";
+export type HouseView = "front" | "left" | "rear" | "right";
 
 export type Topic = {
   id: string;
+  number: number;
   title: string;
   summary: string;
   detail: string;
   lessonSlug: string;
-  duration: string;
+  durationMinutes: number;
+  chapterId: string;
   audience: "all" | LearnerRole;
-  icon: "foundation" | "materials" | "air" | "water" | "safety" | "workplace";
+  view: HouseView;
+  x: number;
+  y: number;
 };
 
-export type ModuleCard = {
+export type Chapter = {
   id: string;
+  number: number;
   title: string;
   summary: string;
-  lessons: number;
-  estimatedTime: string;
+  estimatedMinutes: number;
+  pathwayMode: "shared" | "variant";
+  topicIds: string[];
+};
+
+export type CertificateRecord = {
+  id: string;
+  learnerName: string;
+  courseTitle: string;
+  completedAt: string;
+  pathway: LearnerRole;
 };
