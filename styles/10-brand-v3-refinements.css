@@ -1,0 +1,64 @@
+body.brand-v3 .hero-section > .container { position: relative; z-index: 3; }
+body.brand-v3 .hero-horizon { z-index: 1; height: 145px; opacity: 0.95; }
+body.brand-v3 .hero-horizon .horizon-navy { bottom: -72px; height: 132px; }
+body.brand-v3 .hero-horizon .horizon-dots { bottom: -18px; height: 88px; background-size: 36px 36px; }
+body.brand-v3 .hero-horizon .horizon-white { bottom: 34px; height: 8px; }
+body.brand-v3 .hero-horizon .horizon-gold { bottom: -26px; height: 55px; }
+body.brand-v3 .hero-horizon .horizon-red { bottom: -58px; height: 72px; }
+
+body.brand-v3 .status-badge {
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--brand-neutral-50);
+  color: var(--brand-navy-900);
+}
+body.brand-v3 .status-completed,
+body.brand-v3 .status-approved { background: var(--color-success-soft); color: var(--color-success); border-color: color-mix(in srgb, var(--color-success) 30%, transparent); }
+body.brand-v3 .status-current,
+body.brand-v3 .status-available { background: var(--brand-sky-100); color: var(--brand-navy-900); border-color: var(--brand-sky-200); }
+body.brand-v3 .status-locked { background: var(--brand-neutral-100); color: var(--color-text-soft); }
+
+body.brand-v3 .brand-system-page .horizon-bands { height: 150px; }
+body.brand-v3 .brand-system-page .brand-component-row:last-child { padding-bottom: 9rem; }
+
+:root[data-theme="dark"] body.brand-v3 .hero-section,
+:root[data-theme="dark"] body.brand-v3 .auth-section,
+:root[data-theme="dark"] body.brand-v3 .completion-section,
+:root[data-theme="dark"] body.brand-v3 .admin-page,
+:root[data-theme="dark"] body.brand-v3 .editor-page {
+  background: linear-gradient(180deg, var(--color-card), var(--color-page));
+}
+:root[data-theme="dark"] body.brand-v3 .preview-rooms span,
+:root[data-theme="dark"] body.brand-v3 .house-room,
+:root[data-theme="dark"] body.brand-v3 .certificate-border,
+:root[data-theme="dark"] body.brand-v3 .chart-column > b,
+:root[data-theme="dark"] body.brand-v3 .form-grid input,
+:root[data-theme="dark"] body.brand-v3 .form-grid select,
+:root[data-theme="dark"] body.brand-v3 .form-grid textarea,
+:root[data-theme="dark"] body.brand-v3 .publish-card select {
+  background: var(--color-card);
+  color: var(--color-text);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="system"] body.brand-v3 .hero-section,
+  :root[data-theme="system"] body.brand-v3 .auth-section,
+  :root[data-theme="system"] body.brand-v3 .completion-section,
+  :root[data-theme="system"] body.brand-v3 .admin-page,
+  :root[data-theme="system"] body.brand-v3 .editor-page {
+    background: linear-gradient(180deg, var(--color-card), var(--color-page));
+  }
+}
+
+@media (max-width: 640px) {
+  body.brand-v3 .hero-horizon { height: 105px; }
+  body.brand-v3 .hero-horizon .horizon-dots { display: none; }
+  body.brand-v3 .hero-section { padding-bottom: 7rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.brand-v3 .primary-nav a::before,
+  body.brand-v3 .button,
+  body.brand-v3 .brand-sun,
+  body.brand-v3 .horizon-layer { transition: none !important; transform: none !important; }
+}
