@@ -1,0 +1,53 @@
+body.learning-commons-v4 .accessibility-feature-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+body.learning-commons-v4 .capability-card { padding: 24px; border: 1px solid var(--lc-border); border-radius: 16px; background: white; box-shadow: 0 6px 18px rgba(11,47,74,.05); }
+body.learning-commons-v4 .capability-card h2,
+body.learning-commons-v4 .capability-card h3 { margin-top: 18px; font-size: 1.45rem; }
+body.learning-commons-v4 .capability-card p { margin-top: 10px; color: var(--lc-muted); }
+body.learning-commons-v4 .accessibility-testing-card { margin-top: 34px; padding: 30px; border-left: 5px solid var(--lc-gold-500); background: var(--lc-sky-100); }
+body.learning-commons-v4 .accessibility-testing-card p { margin-top: 12px; color: var(--lc-muted); }
+body.learning-commons-v4 .editor-page { background: var(--lc-warm); }
+body.learning-commons-v4 .editor-topbar { display: flex; justify-content: space-between; gap: 20px; align-items: center; margin-bottom: 36px; }
+body.learning-commons-v4 .editor-actions { display: flex; gap: 12px; }
+body.learning-commons-v4 .editor-heading { display: flex; justify-content: space-between; gap: 30px; align-items: end; padding-bottom: 26px; border-bottom: 1px solid var(--lc-border); }
+body.learning-commons-v4 .editor-heading > div { max-width: 760px; }
+body.learning-commons-v4 .editor-heading p { margin-top: 14px; color: var(--lc-muted); }
+body.learning-commons-v4 .save-notice { display: flex; align-items: center; gap: 8px; margin-top: 20px; padding: 12px 14px; border-radius: 10px; background: #e9f5ef; color: #18563c; }
+body.learning-commons-v4 .editor-layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 24px; margin-top: 28px; }
+body.learning-commons-v4 .editor-main,
+body.learning-commons-v4 .editor-sidebar { display: grid; align-content: start; gap: 20px; }
+body.learning-commons-v4 .editor-card { padding: 24px; border: 1px solid var(--lc-border); border-radius: 16px; background: white; box-shadow: 0 6px 18px rgba(11,47,74,.04); }
+body.learning-commons-v4 .editor-card-heading { display: grid; grid-template-columns: 48px 1fr; gap: 14px; margin-bottom: 22px; }
+body.learning-commons-v4 .editor-card-heading p { margin-top: 5px; color: var(--lc-muted); }
+body.learning-commons-v4 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+body.learning-commons-v4 .form-grid .full-span { grid-column: 1 / -1; }
+body.learning-commons-v4 .form-grid label,
+body.learning-commons-v4 .publish-card label { display: grid; gap: 7px; color: var(--lc-navy-950); font-weight: 700; }
+body.learning-commons-v4 .form-grid input,
+body.learning-commons-v4 .form-grid select,
+body.learning-commons-v4 .form-grid textarea,
+body.learning-commons-v4 .publish-card select { width: 100%; padding: 11px 12px; border: 1px solid var(--lc-border); border-radius: 9px; background: white; color: var(--lc-ink); font-weight: 400; }
+body.learning-commons-v4 .form-grid input:focus,
+body.learning-commons-v4 .form-grid select:focus,
+body.learning-commons-v4 .form-grid textarea:focus,
+body.learning-commons-v4 .publish-card select:focus { border-color: var(--lc-navy-800); outline: 3px solid var(--lc-gold-100); }
+body.learning-commons-v4 .upload-zone { display: grid; place-items: center; gap: 8px; min-height: 210px; padding: 28px; border: 2px dashed var(--lc-blue-600); border-radius: 14px; background: var(--lc-sky-100); text-align: center; }
+body.learning-commons-v4 .upload-zone svg { width: 36px; height: 36px; color: var(--lc-navy-800); }
+body.learning-commons-v4 .upload-zone span { color: var(--lc-muted); font-size: .86rem; }
+body.learning-commons-v4 .top-gap { margin-top: 20px; }
+body.learning-commons-v4 .publish-card { position: sticky; top: 106px; border-top: 5px solid var(--lc-gold-500); }
+body.learning-commons-v4 .publish-card h2 { margin-bottom: 20px; }
+body.learning-commons-v4 .workflow-list { display: grid; gap: 10px; margin: 22px 0; }
+body.learning-commons-v4 .workflow-list span { display: flex; gap: 8px; color: var(--lc-muted); font-size: .9rem; }
+body.learning-commons-v4 .workflow-list span.done { color: var(--lc-success); }
+@media (max-width: 900px) {
+  body.learning-commons-v4 .editor-layout { grid-template-columns: 1fr; }
+  body.learning-commons-v4 .publish-card { position: static; }
+}
+@media (max-width: 620px) {
+  body.learning-commons-v4 .accessibility-feature-grid,
+  body.learning-commons-v4 .form-grid { grid-template-columns: 1fr; }
+  body.learning-commons-v4 .form-grid .full-span { grid-column: auto; }
+  body.learning-commons-v4 .editor-topbar,
+  body.learning-commons-v4 .editor-heading { align-items: stretch; flex-direction: column; }
+  body.learning-commons-v4 .editor-actions { flex-direction: column; }
+}
