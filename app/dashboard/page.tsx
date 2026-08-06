@@ -18,7 +18,7 @@ export default function DashboardPage() {
       <div className="container">
         <header className="v5-page-head"><div><span className="v5-kicker"><HardHat aria-hidden="true" /> {roleLabel}</span><h1>Welcome back. Continue your course.</h1><p>Your progress is saved in this demonstration browser so you can leave and return to the same place.</p></div><Link href="/role-selection" className="v5-text-link">Change pathway</Link></header>
 
-        <section className="v5-resume-card" aria-label="Resume learning"><ProgressRing value={progress} label="course progress" /><div><span className="v5-kicker">Next step</span><h2>{currentChapter.title}</h2><p>Continue with the interactive house and the topic currently in progress.</p><div className="v5-meta"><span><BookOpen aria-hidden="true" /> Chapter {currentChapter.number} of 6</span><span><Clock3 aria-hidden="true" /> Up to {course.estimatedMinutes} minutes total</span></div></div><Link href="/house" className="button primary">Continue learning <ArrowRight aria-hidden="true" /></Link></section>
+        <section className="v5-resume-card" aria-label="Resume learning"><ProgressRing value={progress} label="course progress" /><div><span className="v5-kicker">Next step</span><h2>{currentChapter.title}</h2><p>Continue with the interactive house and the topic currently in progress.</p><div className="v5-meta"><span><BookOpen aria-hidden="true" /> Chapter {currentChapter.number} of 6</span><span><Clock3 aria-hidden="true" /> Up to {course.estimatedMinutes} minutes total</span></div></div><Link href="/house" className="button primary" data-testid="continue-learning">Continue learning <ArrowRight aria-hidden="true" /></Link></section>
 
         <div className="v5-dashboard-grid">
           <section>
