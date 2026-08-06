@@ -1,112 +1,151 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
   BadgeCheck,
-  Building2,
   Captions,
-  CircleDotDashed,
+  CheckCircle2,
+  Keyboard,
+  ListChecks,
   MousePointerClick,
   ShieldCheck,
-  Users,
 } from "lucide-react";
-import { BrandSun, HorizonBands } from "@/components/brand-elements";
 
-const capabilities = [
-  { icon: Building2, title: "Learn through the building", text: "A chapter-level house experience with equivalent hotspot, keyboard, touch, and structured-list navigation." },
-  { icon: MousePointerClick, title: "Participate your way", text: "Activities support pointer, touch, keyboard, and text-equivalent interaction paths." },
-  { icon: Captions, title: "Access every lesson", text: "Captions, transcripts, readable content, text sizing, theme, and motion preferences are built into the concept." },
-  { icon: ShieldCheck, title: "Keep KOTC in control", text: "The future administration model keeps curriculum, review stages, certificates, and reporting under KOTC governance." },
+const journeySteps = [
+  "Choose a learning pathway",
+  "Explore the interactive house",
+  "Complete practical lessons",
+  "Use accessible activities",
+  "Track progress and completion",
 ];
 
 export default function HomePage() {
   return (
     <div>
-      <section className="hero-section">
-        <div className="container hero-grid">
-          <div className="hero-copy">
-            <span className="eyebrow"><CircleDotDashed aria-hidden="true" /> Interactive learning proposal</span>
-            <h1>A learning journey shaped around people, place, and practical action.</h1>
-            <p className="hero-lead">
-              A working front-end concept for accessible online training in green and healthy building, culturally safer workplaces, and clear learner progress.
+      <section className="lc-hero">
+        <div className="container lc-hero-grid">
+          <div className="lc-hero-copy">
+            <span className="eyebrow">Interactive educational platform concept</span>
+            <h1>Practical learning for greener building and safer workplaces.</h1>
+            <p>
+              A functional learner experience that turns green-building topics into clear, practical steps while supporting captions, transcripts, keyboard use, non-drag activities, and visible progress.
             </p>
             <div className="button-row">
               <Link href="/sign-in" className="button primary">
                 Start the learner journey <ArrowRight aria-hidden="true" />
               </Link>
-              <Link href="/admin" className="button secondary">
-                View the admin concept
-              </Link>
-            </div>
-            <div className="trust-row">
-              <span><BadgeCheck aria-hidden="true" /> WCAG 2.2 AA target</span>
-              <span><Users aria-hidden="true" /> KOTC-led co-design</span>
-              <span><ShieldCheck aria-hidden="true" /> Privacy-conscious architecture</span>
+              <Link href="/admin" className="button secondary">View administrator tools</Link>
             </div>
           </div>
-          <div className="hero-visual">
-            <BrandSun />
-            <div className="preview-window">
-              <div className="preview-window-bar"><span /><span /><span /><small>learner dashboard</small></div>
-              <div className="preview-content">
-                <div className="preview-welcome">
-                  <div>
-                    <small>Welcome back</small>
-                    <strong>Continue your learning</strong>
-                  </div>
-                  <div className="preview-avatar">KT</div>
-                </div>
-                <div className="preview-progress-card">
-                  <div className="mini-ring"><strong>34%</strong></div>
-                  <div>
-                    <small>Current chapter</small>
-                    <strong>Green and healthy building foundations</strong>
-                    <div className="mini-progress"><span /></div>
-                  </div>
-                </div>
-                <div className="preview-house">
-                  <div className="preview-roof" />
-                  <div className="preview-rooms">
-                    <span>Foundations</span><span className="current">Materials</span><span>Air quality</span><span>Water</span>
-                  </div>
-                </div>
-              </div>
+          <div className="lc-hero-visual">
+            <div className="lc-hero-frame">
+              <Image
+                src="/assets/v4/illustrations/hero-workshop.svg"
+                alt="Illustrated sustainable-construction workshop with adult learners comparing materials"
+                width={1200}
+                height={800}
+                priority
+              />
             </div>
-            <div className="floating-note note-one">Progress saved on this device</div>
-            <div className="floating-note note-two">Keyboard and list alternatives</div>
+            <div className="lc-hero-chip" aria-label="Sample learner progress">
+              <span className="lc-progress-disc">34%</span>
+              <span><strong>Current chapter</strong> Green and healthy building foundations</span>
+            </div>
           </div>
         </div>
-        <HorizonBands className="hero-horizon" />
       </section>
 
-      <section className="section">
+      <aside className="lc-proposal-note" role="note">
         <div className="container">
-          <div className="section-heading">
-            <span className="eyebrow">What this concept demonstrates</span>
-            <h2>The most important learning, accessibility, and governance requirements working together.</h2>
-            <p>Every screen is coded, responsive, and designed to translate into the proposed production architecture.</p>
+          <ShieldCheck aria-hidden="true" />
+          <span><strong>Proposal-stage concept:</strong> final cultural content, terminology, imagery, and production brand files require KOTC review and approval.</span>
+        </div>
+      </aside>
+
+      <section className="section">
+        <div className="container lc-journey-grid">
+          <div className="lc-copy">
+            <span className="eyebrow">A clear learner journey</span>
+            <h2>Every step answers what comes next.</h2>
+            <p>The experience is structured around orientation, practical learning, interaction, feedback, and completion—not around a generic dashboard full of equal cards.</p>
+            <ul>
+              {journeySteps.map((step) => <li key={step}><CheckCircle2 aria-hidden="true" /> {step}</li>)}
+            </ul>
           </div>
-          <div className="capability-grid">
-            {capabilities.map(({ icon: Icon, title, text }) => (
-              <article className="capability-card" key={title}>
-                <span className="icon-tile"><Icon aria-hidden="true" /></span>
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </article>
-            ))}
+          <div className="lc-asset-card">
+            <Image
+              src="/assets/v4/illustrations/learning-path.svg"
+              alt="Five-step illustrated learning path from pathway selection to completion"
+              width={1200}
+              height={700}
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="section lc-signature-section">
+        <div className="container lc-signature-grid">
+          <div className="lc-asset-card">
+            <Image
+              src="/assets/v4/illustrations/house-cutaway.svg"
+              alt="Cutaway house illustration showing learning topics across building systems"
+              width={1200}
+              height={800}
+            />
+          </div>
+          <div className="lc-copy">
+            <span className="eyebrow">Signature interaction</span>
+            <h2>Learn through the building, room by room.</h2>
+            <p>The interactive house connects construction topics to a spatial journey. Numbered controls, a selected-topic panel, and an equivalent structured list provide the same lesson access across pointer, keyboard, touch, and assistive technology.</p>
+            <div className="button-row">
+              <Link href="/house" className="button primary">Explore the interactive house <ArrowRight aria-hidden="true" /></Link>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="section subtle-section">
-        <div className="container split-feature">
-          <div>
-            <span className="eyebrow">Important boundary</span>
-            <h2>Brand-aligned direction, not final cultural content.</h2>
+        <div className="container lc-access-grid">
+          <div className="lc-copy">
+            <span className="eyebrow">Inclusive by design</span>
+            <h2>Access support is part of the learning experience.</h2>
+            <p>Accessibility is treated as a product requirement rather than an optional toolbar added after the interface is complete.</p>
+            <ul>
+              <li><Keyboard aria-hidden="true" /> Complete navigation and activities with a keyboard</li>
+              <li><Captions aria-hidden="true" /> Captions and transcripts beside learning media</li>
+              <li><MousePointerClick aria-hidden="true" /> Equivalent non-drag interaction methods</li>
+              <li><ListChecks aria-hidden="true" /> Clear instructions, status, and supportive feedback</li>
+            </ul>
           </div>
-          <div className="boundary-card">
-            <p>
-              This concept uses visual properties observed in the supplied KOTC website reference. Final logos, imagery, terminology, stories, symbolism, patterns, and production content must be confirmed through KOTC-led cultural and brand review.
-            </p>
+          <div className="lc-asset-card">
+            <Image
+              src="/assets/v4/illustrations/accessibility-devices.svg"
+              alt="Illustration of accessible learning across desktop, tablet, keyboard, transcript, and non-drag controls"
+              width={1200}
+              height={760}
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container lc-control-grid">
+          <div className="lc-admin-preview" aria-label="Illustrative administrator content-review workspace">
+            <div className="lc-admin-preview-head"><strong>KOTC content workspace</strong><BadgeCheck aria-hidden="true" /></div>
+            <div className="lc-admin-preview-body">
+              <div className="lc-admin-preview-nav"><span>Curriculum</span><span>Media</span><span>Activities</span><span>Reviews</span><span>Learners</span></div>
+              <div className="lc-admin-preview-content">
+                <div className="lc-review-row"><span><strong>Lower-impact materials</strong><small>Lesson and transcript</small></span><span className="lc-status">Cultural review</span></div>
+                <div className="lc-review-row"><span><strong>Material comparison activity</strong><small>Keyboard and touch paths</small></span><span className="lc-status">Accessibility review</span></div>
+                <div className="lc-review-row"><span><strong>Completion certificate</strong><small>Rules and verification</small></span><span className="lc-status">Ready for approval</span></div>
+              </div>
+            </div>
+          </div>
+          <div className="lc-copy">
+            <span className="eyebrow">KOTC remains in control</span>
+            <h2>Curriculum, review, publishing, and reporting stay visible.</h2>
+            <p>The administrator concept demonstrates structured content, transcript management, accessibility review, cultural review, publishing states, learner reporting, and completion evidence.</p>
+            <div className="button-row"><Link href="/admin" className="button secondary">Open admin preview <ArrowRight aria-hidden="true" /></Link></div>
           </div>
         </div>
       </section>
