@@ -15,7 +15,7 @@ test("registration concept continues into pathway selection without submitting d
   await page.getByRole("button", { name: /create account and choose pathway/i }).click();
 
   await expect(page).toHaveURL(/\/role-selection/);
-  await expect(page.getByRole("heading", { name: /which learning pathway/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /which version of chapter 5/i })).toBeVisible();
 });
 
 test("learner can move from pathway selection to the exterior interactive house", async ({ page }) => {
