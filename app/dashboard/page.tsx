@@ -20,8 +20,8 @@ export default function DashboardPage() {
         <div className="dashboard-heading">
           <div>
             <span className="eyebrow"><HardHat aria-hidden="true" /> {roleLabel}</span>
-            <h1>Your next practical learning step is ready.</h1>
-            <p>Continue the current chapter, understand what remains, and access supporting resources without searching through a dense dashboard.</p>
+            <h1>Your next step is ready.</h1>
+            <p>Continue the current practical-learning chapter, understand what remains, and access supporting resources without searching through a dense dashboard.</p>
           </div>
           <Link href="/role-selection" className="text-link">Change pathway</Link>
         </div>
