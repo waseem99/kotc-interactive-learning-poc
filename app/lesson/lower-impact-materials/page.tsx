@@ -1,18 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowLeft,
-  ArrowRight,
-  Captions,
-  Clock3,
-  Download,
-  FileText,
-  Leaf,
-  Pause,
-  Play,
-  Volume2,
-} from "lucide-react";
+import { ArrowLeft, ArrowRight, Captions, Clock3, Download, FileText, Leaf, Pause, Play, Volume2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useDemoState } from "@/components/demo-state";
 import { LessonInteractions } from "@/components/lesson-interactions";
@@ -38,17 +28,23 @@ export default function LessonPage() {
           <div>
             <span className="eyebrow"><Leaf aria-hidden="true" /> Sample lesson</span>
             <h1>Choosing lower-impact materials</h1>
-            <p>Use a balanced set of questions to compare health, durability, sourcing, installation, and end-of-life considerations.</p>
+            <p>Compare health, durability, sourcing, installation, maintenance, and end-of-life information before making a material decision.</p>
           </div>
           <div className="lesson-meta"><span><Clock3 aria-hidden="true" /> 12 minutes</span><span>Lesson 2 of 6</span></div>
         </div>
 
         <div className="lesson-layout">
           <article className="lesson-main">
-            <div className="video-concept" aria-label="Illustrative video player concept">
-              <div className="video-scene" aria-hidden="true">
-                <div className="material-board board-one" /><div className="material-board board-two" /><div className="material-board board-three" />
-                <span>Illustrative media placeholder</span>
+            <div className="video-concept" aria-label="Illustrative accessible learning-media concept">
+              <div className="video-scene">
+                <Image
+                  src="/assets/v4/illustrations/materials-board.svg"
+                  alt="Illustrated material comparison board showing wood, insulation, steel, and glazing samples"
+                  width={1200}
+                  height={760}
+                  priority
+                />
+                <span>Illustrative lesson media</span>
               </div>
               <div className="video-controls">
                 <button type="button" className="icon-button" onClick={() => setPlaying(!playing)} aria-label={playing ? "Pause concept video" : "Play concept video"}>
@@ -63,7 +59,7 @@ export default function LessonPage() {
 
             <div className="lesson-copy prose">
               <h2>A practical comparison, not a perfect answer</h2>
-              <p>Material decisions involve trade-offs. A product may have low emissions but travel a long distance, or it may be durable but difficult to repair. A useful process makes those trade-offs visible so that the team can choose deliberately.</p>
+              <p>Material decisions involve trade-offs. A product may have low emissions but travel a long distance, or it may be durable but difficult to repair. A useful process makes those trade-offs visible so the team can choose deliberately.</p>
               <div className="learning-callout">
                 <strong>Five questions to ask</strong>
                 <ol>
@@ -107,7 +103,7 @@ export default function LessonPage() {
               <span className="side-icon"><FileText aria-hidden="true" /></span>
               <span className="eyebrow">Downloadable resource</span>
               <h2>Material comparison worksheet</h2>
-              <p>A one-page concept resource for documenting options and questions.</p>
+              <p>A one-page concept resource for documenting options, trade-offs, evidence, and remaining questions.</p>
               <button type="button" className="button secondary full-width" onClick={() => alert("Illustrative download only in this proposal demo.")}>
                 <Download aria-hidden="true" /> Preview download
               </button>
