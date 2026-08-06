@@ -1,11 +1,11 @@
 {
-  "version": "4.0.0-review",
+  "version": "4.1.0-frontend",
   "name": "KOTC Learning Commons V4 Asset Pack",
-  "status": "review-stage",
+  "status": "prototype-ready",
   "productionApproved": false,
   "assetRoot": "/assets/v4",
   "core": {
-    "logo": "/assets/v4/brand/kotc-logo-placeholder.svg",
+    "logo": "/assets/v4/brand/kotc-logo-supplied-reference.svg",
     "hero": "/assets/v4/illustrations/hero-workshop.svg",
     "house": "/assets/v4/illustrations/house-cutaway.svg",
     "journey": "/assets/v4/illustrations/learning-path.svg",
@@ -17,36 +17,10 @@
     "iconSprite": "/assets/v4/icons/ui-icons.svg"
   },
   "spriteIds": {
-    "context": [
-      "workshop-collaboration",
-      "timber-framing",
-      "northern-landscape",
-      "house-roof-detail",
-      "insulation-detail"
-    ],
-    "materials": [
-      "reclaimed-wood",
-      "fibre-insulation",
-      "recycled-steel",
-      "efficient-glazing"
-    ],
-    "patterns": [
-      "circle-rays",
-      "horizon-divider",
-      "horizon-divider-compact",
-      "dot-texture",
-      "dot-texture-sky"
-    ],
-    "icons": [
-      "keyboard",
-      "transcript",
-      "non-drag",
-      "certificate",
-      "completed",
-      "locked",
-      "current-marker",
-      "progress-ring"
-    ]
+    "context": ["workshop-collaboration", "timber-framing", "northern-landscape", "house-roof-detail", "insulation-detail"],
+    "materials": ["reclaimed-wood", "fibre-insulation", "recycled-steel", "efficient-glazing"],
+    "patterns": ["circle-rays", "horizon-divider", "horizon-divider-compact", "dot-texture", "dot-texture-sky"],
+    "icons": ["keyboard", "transcript", "non-drag", "certificate", "completed", "locked", "current-marker", "progress-ring"]
   },
-  "brandBoundary": "The official KOTC logo master is not available in the repository. The included logo placeholder must be replaced before client presentation or production. All other visuals are original neutral prototype assets with no assigned cultural meaning."
+  "brandBoundary": "The user-supplied logo is preserved as a low-resolution raster reference inside an SVG wrapper. It is suitable for the prototype only and must be replaced with an official transparent production master before final delivery. All other visuals are original neutral prototype assets with no assigned cultural meaning."
 }

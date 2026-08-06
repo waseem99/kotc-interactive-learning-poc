@@ -7,13 +7,13 @@ export default function HousePage() {
       <div className="container">
         <div className="page-intro split-intro">
           <div>
-            <span className="eyebrow"><Building2 aria-hidden="true" /> Interactive chapter concept</span>
-            <h1>Navigate a complete learning chapter through the building.</h1>
-            <p>The house turns building topics into an understandable spatial journey while preserving equivalent access through a structured list view.</p>
+            <span className="eyebrow"><Building2 aria-hidden="true" /> Interactive chapter</span>
+            <h1>Navigate a complete learning chapter through the house.</h1>
+            <p>Select a numbered green-building topic to understand its purpose, estimated time, and next action. Switch to the structured list at any time for an equivalent experience.</p>
           </div>
-          <div className="access-note">
-            <span><Keyboard aria-hidden="true" /> Keyboard operable</span>
-            <span><Smartphone aria-hidden="true" /> Touch friendly</span>
+          <div className="access-note" aria-label="Supported interaction methods">
+            <span><Keyboard aria-hidden="true" /> Keyboard</span>
+            <span><Smartphone aria-hidden="true" /> Touch</span>
             <span><Building2 aria-hidden="true" /> List equivalent</span>
           </div>
         </div>
