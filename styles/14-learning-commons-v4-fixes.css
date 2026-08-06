@@ -1,6 +1,9 @@
 body.learning-commons-v4 .house-hotspot { transform: translate(-50%, -50%); }
 body.learning-commons-v4 .house-hotspot:hover,
 body.learning-commons-v4 .house-hotspot[aria-pressed="true"] { transform: translate(-50%, -50%) scale(1.06); }
+body.learning-commons-v4 .status-completed,
+body.learning-commons-v4 .status-approved,
+body.learning-commons-v4 .table-status.status-approved { color: #1f5d42; }
 :root[data-theme="dark"] body.learning-commons-v4 .site-header { background: rgba(12, 34, 50, .96); }
 :root[data-theme="dark"] body.learning-commons-v4 .display-settings summary,
 :root[data-theme="dark"] body.learning-commons-v4 .display-settings-panel,
