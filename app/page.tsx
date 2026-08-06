@@ -4,17 +4,18 @@ import {
   BadgeCheck,
   Building2,
   Captions,
-  Leaf,
+  CircleDotDashed,
   MousePointerClick,
   ShieldCheck,
   Users,
 } from "lucide-react";
+import { BrandSun, HorizonBands } from "@/components/brand-elements";
 
 const capabilities = [
-  { icon: Building2, title: "Interactive house", text: "A chapter-level environment with accessible hotspot and list navigation." },
-  { icon: MousePointerClick, title: "Inclusive activities", text: "Touch, pointer, keyboard, and text-equivalent learning interactions." },
-  { icon: Captions, title: "Accessible media", text: "Caption, transcript, reading, theme, text-size, and motion preferences." },
-  { icon: ShieldCheck, title: "KOTC control", text: "A future CMS model for curriculum, users, certificates, and analytics." },
+  { icon: Building2, title: "Learn through the building", text: "A chapter-level house experience with equivalent hotspot, keyboard, touch, and structured-list navigation." },
+  { icon: MousePointerClick, title: "Participate your way", text: "Activities support pointer, touch, keyboard, and text-equivalent interaction paths." },
+  { icon: Captions, title: "Access every lesson", text: "Captions, transcripts, readable content, text sizing, theme, and motion preferences are built into the concept." },
+  { icon: ShieldCheck, title: "Keep KOTC in control", text: "The future administration model keeps curriculum, review stages, certificates, and reporting under KOTC governance." },
 ];
 
 export default function HomePage() {
@@ -23,10 +24,10 @@ export default function HomePage() {
       <section className="hero-section">
         <div className="container hero-grid">
           <div className="hero-copy">
-            <span className="eyebrow"><Leaf aria-hidden="true" /> Proposal proof of concept</span>
-            <h1>Learning that is interactive, accessible, and built around people.</h1>
+            <span className="eyebrow"><CircleDotDashed aria-hidden="true" /> Interactive learning proposal</span>
+            <h1>A learning journey shaped around people, place, and practical action.</h1>
             <p className="hero-lead">
-              A working front-end concept for an inclusive online training experience focused on green and healthy building, culturally safer workplaces, and practical learner progress.
+              A working front-end concept for accessible online training in green and healthy building, culturally safer workplaces, and clear learner progress.
             </p>
             <div className="button-row">
               <Link href="/sign-in" className="button primary">
@@ -43,6 +44,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="hero-visual">
+            <BrandSun />
             <div className="preview-window">
               <div className="preview-window-bar"><span /><span /><span /><small>learner dashboard</small></div>
               <div className="preview-content">
@@ -73,13 +75,14 @@ export default function HomePage() {
             <div className="floating-note note-two">Keyboard and list alternatives</div>
           </div>
         </div>
+        <HorizonBands className="hero-horizon" />
       </section>
 
       <section className="section">
         <div className="container">
           <div className="section-heading">
-            <span className="eyebrow">What this demo proves</span>
-            <h2>A focused demonstration of the RFP’s hardest requirements.</h2>
+            <span className="eyebrow">What this concept demonstrates</span>
+            <h2>The most important learning, accessibility, and governance requirements working together.</h2>
             <p>Every screen is coded, responsive, and designed to translate into the proposed production architecture.</p>
           </div>
           <div className="capability-grid">
@@ -98,11 +101,11 @@ export default function HomePage() {
         <div className="container split-feature">
           <div>
             <span className="eyebrow">Important boundary</span>
-            <h2>Functional direction, not a final cultural design.</h2>
+            <h2>Brand-aligned direction, not final cultural content.</h2>
           </div>
           <div className="boundary-card">
             <p>
-              The prototype intentionally uses neutral visual language. Final imagery, terminology, stories, symbolism, and brand treatment must be shaped through KOTC-led cultural review, community input, and formal approval.
+              This concept uses visual properties observed in the supplied KOTC website reference. Final logos, imagery, terminology, stories, symbolism, patterns, and production content must be confirmed through KOTC-led cultural and brand review.
             </p>
           </div>
         </div>
