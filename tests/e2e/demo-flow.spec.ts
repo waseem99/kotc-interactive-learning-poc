@@ -30,6 +30,7 @@ test("learner can move from role selection to the interactive house", async ({ p
 test("display preferences persist after refresh", async ({ page }) => {
   await page.goto("/");
   await waitForDemoReady(page);
+  await page.getByRole("button", { name: /open display settings/i }).click();
   await page.getByRole("button", { name: /theme: system/i }).click();
   await page.getByRole("button", { name: /text size: standard/i }).click();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
