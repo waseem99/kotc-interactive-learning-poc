@@ -15,6 +15,8 @@ const navItems = [
   { href: "/admin", label: "Admin preview", icon: BookOpenCheck },
 ];
 
+const logoPath = "/assets/v4/brand/kotc-logo-supplied-reference.svg";
+
 export function SiteShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
 
@@ -24,13 +26,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <header className="site-header">
         <div className="container header-grid">
           <Link href="/" className="brand" aria-label="Keepers of the Circle Learning Commons home">
-            <Image
-              src="/assets/v4/brand/kotc-logo-supplied-reference.png"
-              alt="Keepers of the Circle"
-              width={270}
-              height={148}
-              priority
-            />
+            <Image src={logoPath} alt="Keepers of the Circle" width={270} height={148} priority />
           </Link>
           <nav aria-label="Primary navigation" className="primary-nav">
             {navItems.map(({ href, label, icon: Icon }) => (
@@ -52,12 +48,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
         <div className="container footer-grid">
           <div>
             <Link href="/" className="brand" aria-label="Keepers of the Circle Learning Commons home">
-              <Image
-                src="/assets/v4/brand/kotc-logo-supplied-reference.png"
-                alt="Keepers of the Circle"
-                width={270}
-                height={148}
-              />
+              <Image src={logoPath} alt="Keepers of the Circle" width={270} height={148} />
             </Link>
             <p>Accessible, practical learning for green building and culturally safer workplaces.</p>
           </div>
